@@ -17,7 +17,7 @@ const Footer = () => {
               </p>
             </div>
             <div class="lg:w-2/4 md:w-1/2 w-full px-4 pt-5">
-              <h2 class="address-title  tracking-widest text-sm mb-3">
+              <h2 class="address-title tracking-widest text-sm mb-3">
                 Address
               </h2>
               <div class="address-list text-center lg:text-start md:text-start">
