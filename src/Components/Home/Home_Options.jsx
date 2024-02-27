@@ -9,7 +9,7 @@ import Activites from "../../images/activites.jpg";
 const Home_Options = () => {
   return (
     <>
-      <div className="options justify-center grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:px-10 md:px-10 py-10 pb-12">
+      <div className="options justify-center grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:px-10 md:px-10 py-10">
       {/* <div className=""> */}
         {/* <div className=""> */}
           <Option
