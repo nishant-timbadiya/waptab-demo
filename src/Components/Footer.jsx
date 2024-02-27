@@ -9,7 +9,7 @@ const Footer = () => {
         <div class="container px-5 py-12 mx-auto">
           <div class="flex flex-wrap justify-between md:text-left text-center order-first">
             <div class="lg:w-2/4 md:w-1/2 w-full px-4 pt-5">
-              <h2 class="footer-about-title tracking-widest  mb-3">About us</h2>
+              <h2 class="footer-about-title font-[Montserrat] tracking-widest  mb-3">About us</h2>
               <p className="footer-about-content">
                 WAPTAG, is a collective of water industry professionals and
                 experts, fostering collaboration and innovation in water
@@ -17,11 +17,11 @@ const Footer = () => {
               </p>
             </div>
             <div class="lg:w-2/4 md:w-1/2 w-full px-4 pt-5">
-              <h2 class="address-title tracking-widest text-sm mb-3">
+              <h2 class="address-title font-[Montserrat] tracking-widest text-sm mb-3">
                 Address
               </h2>
               <div class="address-list text-center lg:text-start md:text-start">
-                <div className="add flex">
+                <div className="add flex font-[Montserrat]">
                   <div className="emoji">
                     <MdMail />
                   </div>
@@ -29,13 +29,13 @@ const Footer = () => {
                   Nr. Ravija Plaza, Thaltej-Shilaj Road, Thaltej, Ahmedabad -
                   380059
                 </div>
-                  <div class="number flex lg:justify-start md:justify-start justify-center items-center pt-1">
+                  <div class="number flex font-[Montserrat] lg:justify-start md:justify-start justify-center items-center pt-1">
                     <div className="emoji">
                       <MdCall />
                     </div>
                     &nbsp;+91 99741 52935 / 99741 52936
                   </div>
-                <div className="email flex items-center lg:justify-start md:justify-start justify-center">
+                <div className="email flex font-[Montserrat] items-center lg:justify-start md:justify-start justify-center">
                   <div className="emoji">
                     <MdMail />
                   </div>{" "}
