@@ -10,7 +10,8 @@ const Home_Options = () => {
   return (
     <>
       <div className="options justify-center grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:px-10 md:px-10 py-10 pb-12">
-        <div className="mx-auto pb-10">
+      {/* <div className=""> */}
+        {/* <div className=""> */}
           <Option
             content={"Waptag Expo"}
             img={Expo}
@@ -18,8 +19,8 @@ const Home_Options = () => {
               "The 8th Edition of WAPTAG Water Expo is a highly anticipated event that brings together professionals, experts, policymakers, and enthusiasts from the water industry."
             }
           />
-        </div>
-        <div className="mx-auto pb-10">
+        {/* </div> */}
+        {/* <div className=""> */}
           <Option
             content={"IAMPO"}
             img={IAPMO}
@@ -27,8 +28,8 @@ const Home_Options = () => {
               "IAPMO India Private Limited, India (IAPMO-I) is devoted to the health, safety, and welfare of the people of India and, is an Indian corporation established to develop and promote IAPMO."
             }
           />
-        </div>
-        <div className="mx-auto pb-10">
+        {/* </div> */}
+        {/* <div className=""> */}
           <Option
             content={"Activities"}
             img={Activites}
@@ -36,8 +37,8 @@ const Home_Options = () => {
               "WAPTAG - IAMPO India has launched “Certified Service Technician'' (CST) program for Residential water treatment systems. This program is intended for Installer and Service Technicians in the residential water segment."
             }
           />
-        </div>
-        <div className="mx-auto pb-10">
+        {/* </div> */}
+        {/* <div className=""> */}
           <Option
             content={"Facilities"}
             img={Facilites}
@@ -45,7 +46,7 @@ const Home_Options = () => {
               "Members of WAPTAG can use the conference room, training room, and meeting room with enthusiasm for their business. They can notify the date and time for usage. WAPTAB provides a modern air-conditioned facility with all the necessary amenities"
             }
           />
-        </div>
+        {/* </div> */}
       </div>
     </>
   );
