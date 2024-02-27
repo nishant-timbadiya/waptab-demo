@@ -9,11 +9,11 @@ import { AiOutlineClose } from "react-icons/ai";
 function Main_Header() {
   const [isActive, setIsActive] = useState(1);
   
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const handleNavSelected = (e) => {
     setIsActive(e.target.id);
-    setIsOpen(false);
+    setIsOpen(true);
   };
 
   // const toggleMenu = () => {

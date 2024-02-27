@@ -21,7 +21,7 @@ const Past_Exhibitors = () => {
   return (
     <>
       <div className="exhibitors-title  text-center mt-10 ">
-        <span className="title-underline-5">Our Past</span> Exhibitions
+        <span className="title-underline-5">Our Past</span> Events
       </div>
       <Splide
         options={{

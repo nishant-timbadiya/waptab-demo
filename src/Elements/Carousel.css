@@ -32,7 +32,7 @@
     position: absolute;
     width: 150px;
     border-top: solid 3px rgb(3,74,102) ;
-    left: 8vw;
+    left: 5vw;
     bottom: -12px;
     border-radius: 50%;
     height: 8px;
@@ -45,7 +45,7 @@
         position: absolute;
         width: 150px;
         border-top: solid 3px rgb(3,74,102) ;
-        left: 16vw;
+        left: 10vw;
         bottom: -12px;
         border-radius: 50%;
         height: 8px;
@@ -59,15 +59,15 @@
         position: absolute;
         width: 150px;
         border-top: solid 3px rgb(3,74,102) ;
-        left: 30vw;
-        bottom: -18px;
+        left: 20vw;
+        bottom: -14px;
         border-radius: 50%;
         height: 8px;
         
     }
   }
 
-  @media (max-width: 397px) {
+  /* @media (max-width: 397px) {
     .title-underline-5::after{
         content: "";
         position: absolute;
@@ -79,5 +79,5 @@
         height: 8px;
         
     }
-  }
+  } */
   
