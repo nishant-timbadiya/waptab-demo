@@ -9,8 +9,8 @@ import Activites from "../../images/activites.jpg";
 const Home_Options = () => {
   return (
     <>
-      <div className="options justify-center grid grid-cols-1 lg:grid-cols-4 gap-6 lg:px-10 md:px-10 py-10 pb-12">
-        <div className="mx-auto lg:w-auto">
+      <div className="options justify-center grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:px-10 md:px-10 py-10 pb-12">
+        <div className="mx-auto pb-10">
           <Option
             content={"Waptag Expo"}
             img={Expo}
@@ -19,7 +19,7 @@ const Home_Options = () => {
             }
           />
         </div>
-        <div className="mx-auto lg:w-auto">
+        <div className="mx-auto pb-10">
           <Option
             content={"IAMPO"}
             img={IAPMO}
@@ -28,7 +28,7 @@ const Home_Options = () => {
             }
           />
         </div>
-        <div className="mx-auto lg:w-auto">
+        <div className="mx-auto pb-10">
           <Option
             content={"Activities"}
             img={Activites}
@@ -37,7 +37,7 @@ const Home_Options = () => {
             }
           />
         </div>
-        <div className="mx-auto lg:w-auto">
+        <div className="mx-auto pb-10">
           <Option
             content={"Facilities"}
             img={Facilites}
