@@ -1,0 +1,83 @@
+.options{
+    display: flex;
+    font-family: 'Poppins';
+    font-weight: 500;
+    letter-spacing: 1px;
+
+}
+.hero-carousel .splide{
+    padding: 0;
+    margin: 0;
+}
+.splide__a{
+    background-color: red;
+}
+
+.exhibitors-title{
+    font-family: 'Montserrat';
+    letter-spacing: 1px;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgb(3,74,102);
+
+}
+
+.title-underline-5{
+    position: relative;
+}
+
+.title-underline-5::after{
+    content: "";
+    position: absolute;
+    width: 150px;
+    border-top: solid 3px rgb(3,74,102) ;
+    left: 8vw;
+    bottom: -12px;
+    border-radius: 50%;
+    height: 8px;
+    
+}
+
+@media (max-width: 990px) {
+    .title-underline-5::after{
+        content: "";
+        position: absolute;
+        width: 150px;
+        border-top: solid 3px rgb(3,74,102) ;
+        left: 16vw;
+        bottom: -12px;
+        border-radius: 50%;
+        height: 8px;
+        
+    }
+  }
+
+@media (max-width: 600px) {
+    .title-underline-5::after{
+        content: "";
+        position: absolute;
+        width: 150px;
+        border-top: solid 3px rgb(3,74,102) ;
+        left: 30vw;
+        bottom: -18px;
+        border-radius: 50%;
+        height: 8px;
+        
+    }
+  }
+
+  @media (max-width: 397px) {
+    .title-underline-5::after{
+        content: "";
+        position: absolute;
+        width: 150px;
+        border-top: solid 3px rgb(3,74,102) ;
+        left: 2vw;
+        bottom: -63px;
+        border-radius: 50%;
+        height: 8px;
+        
+    }
+  }
+  
