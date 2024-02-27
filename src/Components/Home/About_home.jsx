@@ -18,7 +18,7 @@ const About_home = () => {
           </div>
           <div className="">
             <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-flow-col-1 items-center lg:px-16 text-gray-800">
-              <div className="lg:ps-10 md:ps-16 md:pe-10">
+              <div className="lg:ps-10 md:ps-16 md:pe-10 px-2 pb-3">
                   <div className="text-3xl font-bold text-[rgb(3,74,102);] pb-7 underline underline-offset-8 font-[Montserrat]">
                     Our Vision
                   </div>
@@ -40,7 +40,7 @@ const About_home = () => {
               <div className="ImgContent order-2 lg:order-1 mx-auto">
                 <img src={Second} className="rounded-md" alt="" />
               </div>
-              <div className="lg:pe-6 lg:ps-7 md:ps-16 md:pe-10 order-1 lg:order-2">
+              <div className="lg:pe-6 lg:ps-7 md:ps-16 md:pe-10 order-1 px-2 pb-3 lg:order-2">
                 <div>
                   <div className="text-3xl font-bold text-[rgb(3,74,102);] pb-7 underline underline-offset-8 font-[Montserrat]">Our Mission</div>
                 </div>

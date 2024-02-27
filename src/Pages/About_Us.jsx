@@ -37,7 +37,7 @@ const About_Us = () => {
           <div>
           <div className=" ">
             <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-flow-col-1 items-center lg:px-16 px-5">
-              <div className="lg:ps-10 md:ps-16 md:pe-10">
+              <div className="lg:ps-10 md:ps-16 md:pe-10  px-2 pb-3">
                   <div className="text-3xl font-bold text-[rgb(3,74,102);] pb-7 underline underline-offset-8 font-[Montserrat] text-center lg:text-start">
                     Our Vision
                   </div>
@@ -59,7 +59,7 @@ const About_Us = () => {
               <div className="ImgContent order-2 lg:order-1 mx-auto">
                 <img src={Second} className="rounded-md" alt="" />
               </div>
-              <div className="lg:pe-6 lg:ps-7 md:ps-16 md:pe-10 order-1 lg:order-2">
+              <div className="lg:pe-6 lg:ps-7 md:ps-16 md:pe-10 order-1  px-2 pb-3 lg:order-2">
                 <div>
                   <div className="text-3xl font-bold text-[rgb(3,74,102);] pb-7 underline underline-offset-8 font-[Montserrat] text-center lg:text-start">Our Mission</div>
                 </div>
@@ -75,7 +75,7 @@ const About_Us = () => {
             </div>
 
             <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-flow-col-1 items-center lg:px-16 pb-10 px-5">
-              <div className="lg:ps-10 md:ps-16 md:pe-10">
+              <div className="lg:ps-10 md:ps-16 md:pe-10  px-2 pb-3">
                   <div className="text-3xl font-bold text-[rgb(3,74,102);] pb-7 underline underline-offset-8 font-[Montserrat] text-center lg:text-start">
                     Our Objective
                   </div>
@@ -97,7 +97,7 @@ const About_Us = () => {
               <div className="ImgContent order-2 lg:order-1 mx-auto">
                 <img src={Goal} className="rounded-md" alt="" />
               </div>
-              <div className="lg:pe-6 lg:ps-7 md:ps-16 md:pe-10 order-1 lg:order-2">
+              <div className="lg:pe-6 lg:ps-7 md:ps-16 md:pe-10 order-1 lg:order-2  px-2 pb-3">
                 <div>
                   <div className="text-3xl font-bold text-[rgb(3,74,102);] pb-7 underline underline-offset-8 font-[Montserrat] text-center lg:text-start">Our Goal</div>
                 </div>
