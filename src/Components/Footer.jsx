@@ -20,8 +20,8 @@ const Footer = () => {
               <h2 class="address-title  tracking-widest text-sm mb-3">
                 Address
               </h2>
-              <div class="address-list">
-                <div className="add">
+              <div class="address-list text-center lg:text-start md:text-start">
+                <div className="add flex">
                   <div className="emoji">
                     <MdMail />
                   </div>
@@ -29,13 +29,13 @@ const Footer = () => {
                   Nr. Ravija Plaza, Thaltej-Shilaj Road, Thaltej, Ahmedabad -
                   380059
                 </div>
-                <div class="number">
-                  <div className="emoji">
-                    <MdCall />
+                  <div class="number flex lg:justify-start md:justify-start justify-center items-center pt-1">
+                    <div className="emoji">
+                      <MdCall />
+                    </div>
+                    &nbsp;+91 99741 52935 / 99741 52936
                   </div>
-                  +91 99741 52935 / 99741 52936
-                </div>
-                <div className="email">
+                <div className="email flex items-center lg:justify-start md:justify-start justify-center">
                   <div className="emoji">
                     <MdMail />
                   </div>{" "}

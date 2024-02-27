@@ -30,14 +30,14 @@
 }
 
 .address-list > div{
-    display: flex;
-    justify-content: left;
+    /* display: flex; */
+    /* justify-content: left; */
     align-items: flex-start;
     gap: 12px;
 }
 
 .address-list > div:not(:nth-child(1)){
-    justify-content: left;
+    /* justify-content: left; */
     align-items:center ;
 }
 
