@@ -181,19 +181,19 @@ const Join_Waptab = () => {
                 <div>
                   <MdCall />
                 </div>
-                <div>9638935265</div>
+                <div>0123456789</div>
               </div>
               <div className="email">
                 <div>
                   <MdMail />
                 </div>
-                <div>dattanikaran25@gmail.com</div>
+                <div>waptab@gmail.com</div>
               </div>
               <div className="location">
                 <div>
                   <FaLocationDot />
                 </div>
-                <div>Surat Gujarat</div>
+                <div>India</div>
               </div>
             </div>
           </div>

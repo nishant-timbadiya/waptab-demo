@@ -17,7 +17,7 @@ const Options = ({ content, content_p, img }) => {
                 <p>{content}</p>
               </div>
               <div>
-                <p className="text-sm text-center opacity-80">{content_p}</p>
+                <p className="text-sm text-center opacity-80 pt-2">{content_p}</p>
               </div>
             {/* </div> */}
           </div>

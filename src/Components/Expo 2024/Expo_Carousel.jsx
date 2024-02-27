@@ -16,7 +16,7 @@ import Expo_2 from "../../images/Expo-2024-2.jpeg";
 const Expo_Carousel = () => {
   return (
     <>
-      <div className="pt-10 title-underline-3">
+      <div className="pt-10 title-underline-3 lg:mb-10">
         <div className="text-center font-bold text-3xl text-[rgb(3,74,102)]">
           8<sup>TH</sup> EDITION OF WAPTAG WATER EXPO 2024
         </div>
@@ -58,7 +58,7 @@ const Expo_Carousel = () => {
         </SplideSlide>
       </Splide>
 
-      <section className="expo-content-wrapper lg:px-40 md:px-20 bg-[#f2f2f2] py-20 px-6">
+      <section className="expo-content-wrapper lg:px-40 md:px-20 bg-[#f2f2f2] py-20 px-6 lg:mt-10">
         <div className="mx-auto text-3xl font-bold underline underline-offset-8 text-[rgb(3,74,102)] font-[Montserrat] pb-2">EXPO 2024</div>
         <div className="expo-content text-center text-l">
           <p className="">
