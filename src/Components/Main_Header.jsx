@@ -25,7 +25,7 @@ function Main_Header() {
       <div className="lg:px-16 md:px-7 px-5 lg:flex justify-between items-center">
         <div className="">
           <span>
-            <img className="w-52" src={logo} alt="nishant" />
+            <img className="w-48" src={logo} alt="nishant" />
           </span>
         </div>
 

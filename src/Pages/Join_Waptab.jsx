@@ -55,6 +55,48 @@ function Join_Waptab() {
       });
   }
 
+  function Submit_1(e) {
+    e.preventDefault();
+    const formEle = document.querySelector("form");
+    const formData = new FormData(formEle);
+
+    fetch(
+      "https://script.google.com/macros/s/AKfycbyq0CC-2RM0wL---k7ImbsxHHgwEYapKQGqEfcXKDeRfDuM5SF5N0oFcqieNyuVR7bG/exec",
+      {
+        method: "POST",
+        body: formData,
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  function Submit_2(e) {
+    e.preventDefault();
+    const formEle = document.querySelector("form");
+    const formData = new FormData(formEle);
+
+    fetch(
+      "https://script.google.com/macros/s/AKfycbyq0CC-2RM0wL---k7ImbsxHHgwEYapKQGqEfcXKDeRfDuM5SF5N0oFcqieNyuVR7bG/exec",
+      {
+        method: "POST",
+        body: formData,
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   return (
     <div>
       <section className="relative overflow-hidden bg-slate-100 dark:bg-dark pt-20 pb-12">
@@ -149,39 +191,7 @@ function Join_Waptab() {
                                   </h1>
                                 </div>
                                 <div class="divide-y divide-gray-200">
-                                  {/* <div className="App">
-                                    <h1>Contact Me form</h1>
-                                    <h2>
-                                      This demonstrates how to send data from a
-                                      website form to Google sheet in React or
-                                      Vanilla jS
-                                    </h2>
-                                    <div>
-                                      <form
-                                        className="form"
-                                        onSubmit={(e) => Submit(e)}
-                                      >
-                                        <input
-                                          placeholder="Your Name"
-                                          name="Name"
-                                          type="text"
-                                        />
-                                        <input
-                                          placeholder="Your Email"
-                                          name="Email"
-                                          type="text"
-                                        />
-                                        <input
-                                          placeholder="Your Message"
-                                          name="Message"
-                                          type="text"
-                                        />
-                                        <input type="submit" value="Submit" />
-                                      </form>
-                                    </div>
-                                  </div> */}
-
-                                  <form class="max-w-md mx-auto">
+                                  <form onSubmit={(e) => Submit(e)} class="max-w-md mx-auto form">
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="text"
@@ -268,6 +278,7 @@ function Join_Waptab() {
                                     <div className="text-center">
                                     <button
                                       type="submit"
+                                      value="Submit"
                                       class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                     >
                                       Submit
@@ -636,39 +647,7 @@ function Join_Waptab() {
                                   </h1>
                                 </div>
                                 <div class="divide-y divide-gray-200">
-                                  {/* <div className="App">
-                                    <h1>Contact Me form</h1>
-                                    <h2>
-                                      This demonstrates how to send data from a
-                                      website form to Google sheet in React or
-                                      Vanilla jS
-                                    </h2>
-                                    <div>
-                                      <form
-                                        className="form"
-                                        onSubmit={(e) => Submit(e)}
-                                      >
-                                        <input
-                                          placeholder="Your Name"
-                                          name="Name"
-                                          type="text"
-                                        />
-                                        <input
-                                          placeholder="Your Email"
-                                          name="Email"
-                                          type="text"
-                                        />
-                                        <input
-                                          placeholder="Your Message"
-                                          name="Message"
-                                          type="text"
-                                        />
-                                        <input type="submit" value="Submit" />
-                                      </form>
-                                    </div>
-                                  </div> */}
-
-                                  <form class="max-w-md mx-auto">
+                                  <form  onSubmit={(e) => Submit_1(e)} class="max-w-md mx-auto form">
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="text"
@@ -754,6 +733,7 @@ function Join_Waptab() {
                                     </div>
                                     <div className="text-center">
                                     <button
+                                      value="Submit"
                                       type="submit"
                                       class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                     >
@@ -1137,39 +1117,7 @@ function Join_Waptab() {
                                   </h1>
                                 </div>
                                 <div class="divide-y divide-gray-200">
-                                  {/* <div className="App">
-                                    <h1>Contact Me form</h1>
-                                    <h2>
-                                      This demonstrates how to send data from a
-                                      website form to Google sheet in React or
-                                      Vanilla jS
-                                    </h2>
-                                    <div>
-                                      <form
-                                        className="form"
-                                        onSubmit={(e) => Submit(e)}
-                                      >
-                                        <input
-                                          placeholder="Your Name"
-                                          name="Name"
-                                          type="text"
-                                        />
-                                        <input
-                                          placeholder="Your Email"
-                                          name="Email"
-                                          type="text"
-                                        />
-                                        <input
-                                          placeholder="Your Message"
-                                          name="Message"
-                                          type="text"
-                                        />
-                                        <input type="submit" value="Submit" />
-                                      </form>
-                                    </div>
-                                  </div> */}
-
-                                  <form class="max-w-md mx-auto">
+                                  <form  onSubmit={(e) => Submit_2(e)} class="max-w-md mx-auto form">
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="text"
@@ -1255,6 +1203,7 @@ function Join_Waptab() {
                                     </div>
                                     <div className="text-center">
                                     <button
+                                      value="Submit"
                                       type="submit"
                                       class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                     >

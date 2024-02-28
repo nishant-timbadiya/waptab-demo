@@ -33,7 +33,7 @@ const Footer = () => {
                     <div className="emoji">
                       <MdCall />
                     </div>
-                    &nbsp;+91 99741 52935 / 99741 52936
+                    +91 99741 52935 / 99741 52936
                   </div>
                 <div className="email flex font-[Montserrat] items-center lg:justify-start md:justify-start justify-center">
                   <div className="emoji">
