@@ -56,7 +56,7 @@ function Join_Waptab() {
                   Bronze
                 </span>
                 <h2 className="mb-5 text-[42px] font-bold text-dark dark:text-white">
-                  <span>1500</span>
+                  <span>1,500</span>
                   <span className="text-base font-medium text-body-color dark:text-dark-6">
                     INR / 3 Years
                   </span>
@@ -443,7 +443,7 @@ function Join_Waptab() {
                   Silver
                 </span>
                 <h2 className="mb-5 text-[42px] font-bold text-dark dark:text-white">
-                  <span>5000</span>
+                  <span>5,000</span>
                   <span className="text-base font-medium text-body-color dark:text-dark-6">
                     INR/ 3 Years
                   </span>
@@ -757,7 +757,7 @@ function Join_Waptab() {
                   Diamond
                 </span>
                 <h2 className="mb-5 text-[42px] font-bold text-dark dark:text-white">
-                  <span>1 LAKH</span>
+                  <span>1,00,000</span>
                   <span className="text-base font-medium text-body-color dark:text-dark-6">
                     INR/ 15 Years
                   </span>
@@ -1107,3 +1107,9 @@ function Join_Waptab() {
 }
 
 export default Join_Waptab;
+
+
+// Name
+// Email
+// Number
+// designation

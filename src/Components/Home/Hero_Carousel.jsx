@@ -10,8 +10,9 @@ import "@splidejs/react-splide/css/sea-green";
 // or only core styles
 import "@splidejs/react-splide/css/core";
 import "../../Elements/Carousel.css";
-import { carousel_img1, waptab_img } from "../../images/data";
-import Carousel_1 from "../../images/carousel-1.jpg";
+import Home_1 from "../../images/home-1.png";
+import Home_2 from "../../images/home-2.png";
+import Home_3 from "../../images/home-3.jpg";
 
 const Hero_Carousel = () => {
   return (
@@ -35,19 +36,19 @@ const Hero_Carousel = () => {
       <SplideSlide className="">
         <img
           className=""
-          src={carousel_img1}
+          src={Home_1}
           alt="Image 1"
         />
       </SplideSlide>
-      {/* <SplideSlide>
-        <img
-          src={carousel_img1}
-          alt="Image 2"
-        />
-      </SplideSlide> */}
       <SplideSlide>
         <img
-          src={waptab_img}
+          src={Home_3}
+          alt="Image 2"
+        />
+      </SplideSlide>
+      <SplideSlide>
+        <img
+          src={Home_2}
           alt="Image 3"
         />
       </SplideSlide>

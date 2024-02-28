@@ -2,10 +2,10 @@ import React from "react";
 import "../Elements/About.css";
 // import First from "../images/about-1.jpg";
 import Second from "../images/about-2.jpg";
-import Third from "../images/about-3.jpg";
+import Third from "../images/objective.jpg";
 import Vision from "../images/vision-1.jpg";
 import Mission from "../images/mission-1.jpg";
-import Goal from "../images/goal.jpg";
+import Goal from "../images/goal-1.jpg";
 
 const About_Us = () => {
   return (
@@ -43,10 +43,10 @@ const About_Us = () => {
                   </div>
                   <div className="">
                     <ul className="">
-                      <li className="py-2  font-[Montserrat]">&#9658; &nbsp;Business Community - Our goal is to develop a strong business community for the growing industry of water.</li>
-                      <li className=" font-[Montserrat]">&#9658; &nbsp;We believe in the power of collaboration and knowledge exchange, which is why we host seminars, workshops, and networking events to facilitate meaningful interactions among industry peers.</li>
-                      <li className="py-2  font-[Montserrat]">&#9658; &nbsp;Circulate And Share Prompt Information - Waptag organisation wishes to share easy access to exchange views and ideas for healthy business practice.</li>
-                      <li className=" font-[Montserrat]">&#9658; &nbsp;Join us at WAPTAB and be part of a movement dedicated to shaping a brighter, more sustainable future for India's water resources. Together, we can make a meaningful impact.</li>
+                      <li className="py-2  font-[Montserrat]">&#9658; &nbsp;<b>Strong Business Community:</b> We aim to build a strong community of businesses in the growing water industry.</li>
+                      <li className=" font-[Montserrat]">&#9658; &nbsp;<b>Easy Access:</b> We strive to make it easy for business owners to connect and communicate effectively.</li>
+                      <li className="py-2  font-[Montserrat]">&#9658; &nbsp;<b>Quick Information Sharing::</b> WAPTAG is dedicated to sharing ideas promptly to encourage healthy business practices.</li>
+                      <li className=" font-[Montserrat]">&#9658; &nbsp;<b>All-in-One Solutions:</b> Our goal is to provide everything our members need under one roof for their business success.</li>
                     </ul>
                   </div>
               </div>
@@ -89,13 +89,13 @@ const About_Us = () => {
                   </div>
               </div>
               <div className="ImgContent mx-auto">
-                <img src={Third} className="rounded-md"  alt="..." />
+                <img src={Third} className="rounded-md w-screen"  alt="..." />
               </div>
             </div>
 
-            <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-flow-col-1 items-center lg:px-16 lg:py-10 px-5 pb-10">
+            <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-flow-col-1 items-center lg:px-16 lg:py-10 lg:pb-20 md:pb-16 px-5 pb-10">
               <div className="ImgContent order-2 lg:order-1 mx-auto">
-                <img src={Goal} className="rounded-md" alt="" />
+                <img src={Goal} className="rounded-md w-screen" alt="" />
               </div>
               <div className="lg:pe-6 lg:ps-7 md:ps-16 md:pe-10 order-1 lg:order-2  px-2 pb-3">
                 <div>

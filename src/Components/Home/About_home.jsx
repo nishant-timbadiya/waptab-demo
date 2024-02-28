@@ -24,10 +24,10 @@ const About_home = () => {
                   </div>
                   <div className="">
                     <ul>
-                      <li className="py-2  font-[Montserrat]">&#9658; &nbsp;Undertake initiatives for drinking water supply and waster water management,  in both urban and rural areas in India or overseas to Submit relevant projects proposal  to the government for consideration.</li>
-                      <li className=" font-[Montserrat]">&#9658; &nbsp;Lead public campaigns for water conservation, encouraging responsible water and waste water usage.</li>
-                      <li className="py-2  font-[Montserrat]">&#9658; &nbsp;Circulate And Share Prompt Information - Waptab organisation wishes to share easy access to exchange views and ideas for healthy business practice.</li>
-                      <li className=" font-[Montserrat]">&#9658; &nbsp;Single Roof Solutions - Our aim is to provide single roof solutions for all members.</li>
+                      <li className="py-2  font-[Montserrat]">&#9658; &nbsp;<b>Strong Business Community:</b> We aim to build a strong community of businesses in the growing water industry.</li>
+                      <li className=" font-[Montserrat]">&#9658; &nbsp;<b>Easy Access:</b> We strive to make it easy for business owners to connect and communicate effectively.</li>
+                      <li className="py-2  font-[Montserrat]">&#9658; &nbsp;<b>Quick Information Sharing::</b> WAPTAG is dedicated to sharing ideas promptly to encourage healthy business practices.</li>
+                      <li className=" font-[Montserrat]">&#9658; &nbsp;<b>All-in-One Solutions:</b> Our goal is to provide everything our members need under one roof for their business success.</li>
                     </ul>
                   </div>
               </div>
@@ -48,7 +48,7 @@ const About_home = () => {
                 <ul>
                   <li className=" font-[Montserrat]">&#9658; &nbsp;The mission of WAPTAB is to unite the vibrant world of water. It aims to provide a platform for for the the water industry  to converge and work together in achieving solutions to issuesrelated to the water sector.</li>
                   <li className="py-2  font-[Montserrat]">&#9658; &nbsp;WAPTAB is a joint effort of the business community from Bharat</li>
-                  <li className=" font-[Montserrat]">&#9658; &nbsp;Manufacturers, traders, importers and service providers engaged in activity related to water purification domestic as well as industrial water filtration plants, wastewater treatment plants, domestic & industrial RO plants, water purification plants spares and chemicals all activities for safe and clean water useful to drink, farm and manufacturing process.</li>
+                  <li className=" font-[Montserrat]">&#9658; &nbsp;The mission of <span className="font-semibold">WAPTAB</span> is to bring together the dynamic water community from all across India. It strives to create a platform for the water industry to come together and collaborate in finding solutions to challenges within the water sector.</li>
                 </ul>
                 </div>
               </div>
