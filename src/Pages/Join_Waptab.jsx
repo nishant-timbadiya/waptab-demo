@@ -12,7 +12,6 @@ function Join_Waptab() {
     setIsOpen(false);
   };
 
-
   const [isOpen_1, setIsOpen_1] = useState(false);
 
   const openModal_1 = () => {
@@ -23,7 +22,6 @@ function Join_Waptab() {
     setIsOpen_1(false);
   };
 
-
   const [isOpen_2, setIsOpen_2] = useState(false);
 
   const openModal_2 = () => {
@@ -33,7 +31,6 @@ function Join_Waptab() {
   const closeModal_2 = () => {
     setIsOpen_2(false);
   };
-  
 
   function Submit(e) {
     e.preventDefault();
@@ -41,7 +38,7 @@ function Join_Waptab() {
     const formData = new FormData(formEle);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbyo-h3hrqfYlXsTIGPvpvHfu4Wsg-54YZzk2Bi_cyY0lv3WzURTmt6vj-n4HQO6MIr2/exec",
+      "https://script.google.com/macros/s/AKfycbz0nTtdDpHZWERAOJVXKL-iHLZmtzLSyVBeACPBeKLhTlvhmizYMT62Ewa-rZrAFcV8/exec",
       {
         method: "POST",
         body: formData,
@@ -62,7 +59,7 @@ function Join_Waptab() {
     const formData = new FormData(formEle);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbyq0CC-2RM0wL---k7ImbsxHHgwEYapKQGqEfcXKDeRfDuM5SF5N0oFcqieNyuVR7bG/exec",
+      "https://script.google.com/macros/s/AKfycbz0nTtdDpHZWERAOJVXKL-iHLZmtzLSyVBeACPBeKLhTlvhmizYMT62Ewa-rZrAFcV8/exec",
       {
         method: "POST",
         body: formData,
@@ -83,7 +80,7 @@ function Join_Waptab() {
     const formData = new FormData(formEle);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbyq0CC-2RM0wL---k7ImbsxHHgwEYapKQGqEfcXKDeRfDuM5SF5N0oFcqieNyuVR7bG/exec",
+      "https://script.google.com/macros/s/AKfycbz0nTtdDpHZWERAOJVXKL-iHLZmtzLSyVBeACPBeKLhTlvhmizYMT62Ewa-rZrAFcV8/exec",
       {
         method: "POST",
         body: formData,
@@ -176,15 +173,15 @@ function Join_Waptab() {
                           <div class="relative py-3 lg:px-0 md:px-0 px-3 sm:max-w-xl sm:mx-auto">
                             <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
                             <div class="relative px-4 py-1 rounded-lg bg-white shadow-lg sm:rounded-3xl">
-                            <div className="text-end">
-                            <button
-                            onClick={closeModal}
-                            type="button"
-                            className="p-1 pt-3"
-                          >
-                          <AiOutlineClose className="text-black" />
-                          </button>
-                          </div>
+                              <div className="text-end">
+                                <button
+                                  onClick={closeModal}
+                                  type="button"
+                                  className="p-1 pt-3"
+                                >
+                                  <AiOutlineClose className="text-black" />
+                                </button>
+                              </div>
                               <div class="max-w-md mx-auto ps-10 pe-10 pb-10">
                                 <div>
                                   <h1 class="text-2xl pb-3 text-center font-semibold">
@@ -192,7 +189,10 @@ function Join_Waptab() {
                                   </h1>
                                 </div>
                                 <div class="divide-y divide-gray-200">
-                                  <form onSubmit={(e) => Submit(e)} class="max-w-md mx-auto form">
+                                  <form
+                                    onSubmit={(e) => Submit(e)}
+                                    class="max-w-md mx-auto form"
+                                  >
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="text"
@@ -229,7 +229,7 @@ function Join_Waptab() {
                                       <input
                                         type="tel"
                                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                        name="Phonenumber"
+                                        name="PhoneNumber"
                                         id="floating_phone"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-non dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -263,27 +263,27 @@ function Join_Waptab() {
                                         type="text"
                                         name="MemberType"
                                         id="floating_password"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 font-semibold bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
-                                        disabled
+                                        value="Bronze"
+                                        readOnly
                                       />
                                       <label
-                                      
                                         for="floating_password"
-                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 font-bold duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
+                                        class="peer-focus:font-medium absolute text-sm text-blue-500 dark:text-gray-400 font-bold duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
                                       >
-                                        Bronze
+                                        Membership Type
                                       </label>
                                     </div>
                                     <div className="text-center">
-                                    <button
-                                      type="submit"
-                                      value="Submit"
-                                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                    >
-                                      Submit
-                                    </button>
+                                      <button
+                                        type="submit"
+                                        value="Submit"
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                      >
+                                        Submit
+                                      </button>
                                     </div>
                                   </form>
                                 </div>
@@ -296,7 +296,7 @@ function Join_Waptab() {
                   </div>
                 )}
                 <div>
-                  <span className="absolute right-0 top-7 z-[-1]">
+                  <span className="absolute right-0 top-7 z-[1]">
                     <svg
                       width="77"
                       height="172"
@@ -329,7 +329,7 @@ function Join_Waptab() {
                       </defs>
                     </svg>
                   </span>
-                  <span className="absolute right-4 top-4 z-[-1]">
+                  <span className="absolute right-4 top-4 z-[1]">
                     <svg
                       width="41"
                       height="89"
@@ -605,7 +605,7 @@ function Join_Waptab() {
                   </p>
                 </div>
                 <a
-                onClick={openModal_1}
+                  onClick={openModal_1}
                   // href="javascript:void(0)"
                   className="block w-full rounded-md border border-primary bg-primary p-3 text-center text-base font-medium bg-[rgb(3,74,102)] text-white transition hover:bg-[rgb(32,64,77)]"
                 >
@@ -632,15 +632,15 @@ function Join_Waptab() {
                           <div class="relative py-3 lg:px-0 md:px-0 px-3 sm:max-w-xl sm:mx-auto">
                             <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
                             <div class="relative px-4 py-1 rounded-lg bg-white shadow-lg sm:rounded-3xl">
-                            <div className="text-end">
-                            <button
-                            onClick={closeModal_1}
-                            type="button"
-                            className="p-1 pt-3"
-                          >
-                          <AiOutlineClose className="text-black" />
-                          </button>
-                          </div>
+                              <div className="text-end">
+                                <button
+                                  onClick={closeModal_1}
+                                  type="button"
+                                  className="p-1 pt-3"
+                                >
+                                  <AiOutlineClose className="text-black" />
+                                </button>
+                              </div>
                               <div class="max-w-md mx-auto ps-10 pe-10 pb-10">
                                 <div>
                                   <h1 class="text-2xl pb-3 text-center font-semibold">
@@ -648,11 +648,14 @@ function Join_Waptab() {
                                   </h1>
                                 </div>
                                 <div class="divide-y divide-gray-200">
-                                  <form  onSubmit={(e) => Submit_1(e)} class="max-w-md mx-auto form">
+                                  <form
+                                    onSubmit={(e) => Submit_1(e)}
+                                    class="max-w-md mx-auto form"
+                                  >
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="text"
-                                        name="floating_first_name"
+                                        name="Name"
                                         id="floating_first_name"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -668,7 +671,7 @@ function Join_Waptab() {
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="email"
-                                        name="floating_email"
+                                        name="Email"
                                         id="floating_email"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -685,7 +688,7 @@ function Join_Waptab() {
                                       <input
                                         type="tel"
                                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                        name="floating_phone"
+                                        name="PhoneNumber"
                                         id="floating_phone"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -701,7 +704,7 @@ function Join_Waptab() {
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="text"
-                                        name="floating_company"
+                                        name="CompanyName"
                                         id="floating_company"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -717,29 +720,29 @@ function Join_Waptab() {
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="text"
-                                        name="floating_password"
+                                        name="MemberType"
                                         id="floating_password"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        class="block py-2.5 px-0 w-full text-sm font-semibold text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
-                                        disabled
+                                        value="Silver"
+                                        readOnly
                                       />
                                       <label
-                                      
                                         for="floating_password"
-                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 font-bold duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
+                                        class="peer-focus:font-medium absolute text-sm text-blue-500 dark:text-gray-400 font-bold duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
                                       >
-                                        Silver
+                                        Membership Type
                                       </label>
                                     </div>
                                     <div className="text-center">
-                                    <button
-                                      value="Submit"
-                                      type="submit"
-                                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                    >
-                                      Submit
-                                    </button>
+                                      <button
+                                        value="Submit"
+                                        type="submit"
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                      >
+                                        Submit
+                                      </button>
                                     </div>
                                   </form>
                                 </div>
@@ -1076,7 +1079,7 @@ function Join_Waptab() {
                   </p>
                 </div>
                 <a
-                onClick={openModal_2}
+                  onClick={openModal_2}
                   href="javascript:void(0)"
                   className="block w-full rounded-md border border-stroke dark:border-dark-3 bg-[rgb(3,74,102)] p-3 text-center text-base font-medium text-white transition hover:bg-[rgb(32,64,77)]"
                 >
@@ -1102,15 +1105,15 @@ function Join_Waptab() {
                           <div class="relative py-3 lg:px-0 md:px-0 px-3 sm:max-w-xl sm:mx-auto">
                             <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
                             <div class="relative px-4 py-1 rounded-lg bg-white shadow-lg sm:rounded-3xl">
-                            <div className="text-end">
-                            <button
-                            onClick={closeModal_2}
-                            type="button"
-                            className="p-1 pt-3"
-                          >
-                          <AiOutlineClose className="text-black" />
-                          </button>
-                          </div>
+                              <div className="text-end">
+                                <button
+                                  onClick={closeModal_2}
+                                  type="button"
+                                  className="p-1 pt-3"
+                                >
+                                  <AiOutlineClose className="text-black" />
+                                </button>
+                              </div>
                               <div class="max-w-md mx-auto ps-10 pe-10 pb-10">
                                 <div>
                                   <h1 class="text-2xl pb-3 text-center font-semibold">
@@ -1118,11 +1121,14 @@ function Join_Waptab() {
                                   </h1>
                                 </div>
                                 <div class="divide-y divide-gray-200">
-                                  <form  onSubmit={(e) => Submit_2(e)} class="max-w-md mx-auto form">
+                                  <form
+                                    onSubmit={(e) => Submit_2(e)}
+                                    class="max-w-md mx-auto form"
+                                  >
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="text"
-                                        name="floating_first_name"
+                                        name="Name"
                                         id="floating_first_name"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -1138,7 +1144,7 @@ function Join_Waptab() {
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="email"
-                                        name="floating_email"
+                                        name="Email"
                                         id="floating_email"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -1155,7 +1161,7 @@ function Join_Waptab() {
                                       <input
                                         type="tel"
                                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                        name="floating_phone"
+                                        name="PhoneNumber"
                                         id="floating_phone"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -1171,7 +1177,7 @@ function Join_Waptab() {
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="text"
-                                        name="floating_company"
+                                        name="CompanyName"
                                         id="floating_company"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -1187,29 +1193,29 @@ function Join_Waptab() {
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="text"
-                                        name="floating_password"
+                                        name="MemberType"
                                         id="floating_password"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 font-semibold bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
-                                        disabled
+                                        value="Diamond"
+                                        readOnly
                                       />
                                       <label
-                                      
                                         for="floating_password"
-                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 font-bold duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
+                                        class="peer-focus:font-medium absolute text-sm text-blue-500 dark:text-gray-400 font-bold duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
                                       >
-                                        Diamond
+                                        Membership Type
                                       </label>
                                     </div>
                                     <div className="text-center">
-                                    <button
-                                      value="Submit"
-                                      type="submit"
-                                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                    >
-                                      Submit
-                                    </button>
+                                      <button
+                                        value="Submit"
+                                        type="submit"
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                      >
+                                        Submit
+                                      </button>
                                     </div>
                                   </form>
                                 </div>
