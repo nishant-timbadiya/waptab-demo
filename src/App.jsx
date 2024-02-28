@@ -20,7 +20,7 @@ import Expo from "./Pages/Expo";
 import Form from "./Pages/Form";
 import Home from "./Pages/Home";
 import Main_Header from "./Components/Main_Header";
-import Join_Waptab from "./Components/Join_Waptab/Join_Waptab";
+import Join_Waptab from "./Pages/Join_Waptab";
 
 
 export const Pdf_Context = createContext("dinner");
