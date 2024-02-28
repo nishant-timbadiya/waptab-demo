@@ -33,6 +33,7 @@ function Join_Waptab() {
   const closeModal_2 = () => {
     setIsOpen_2(false);
   };
+  
 
   function Submit(e) {
     e.preventDefault();
@@ -40,7 +41,7 @@ function Join_Waptab() {
     const formData = new FormData(formEle);
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbyq0CC-2RM0wL---k7ImbsxHHgwEYapKQGqEfcXKDeRfDuM5SF5N0oFcqieNyuVR7bG/exec",
+      "https://script.google.com/macros/s/AKfycbyo-h3hrqfYlXsTIGPvpvHfu4Wsg-54YZzk2Bi_cyY0lv3WzURTmt6vj-n4HQO6MIr2/exec",
       {
         method: "POST",
         body: formData,
@@ -195,7 +196,7 @@ function Join_Waptab() {
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="text"
-                                        name="floating_first_name"
+                                        name="Name"
                                         id="floating_first_name"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -211,7 +212,7 @@ function Join_Waptab() {
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="email"
-                                        name="floating_email"
+                                        name="Email"
                                         id="floating_email"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -228,9 +229,9 @@ function Join_Waptab() {
                                       <input
                                         type="tel"
                                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                        name="floating_phone"
+                                        name="Phonenumber"
                                         id="floating_phone"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-non dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
                                       />
@@ -244,9 +245,9 @@ function Join_Waptab() {
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="text"
-                                        name="floating_company"
+                                        name="CompanyName"
                                         id="floating_company"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
                                       />
@@ -260,9 +261,9 @@ function Join_Waptab() {
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="text"
-                                        name="floating_password"
+                                        name="MemberType"
                                         id="floating_password"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
                                         disabled
@@ -270,7 +271,7 @@ function Join_Waptab() {
                                       <label
                                       
                                         for="floating_password"
-                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 font-bold duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
                                       >
                                         Bronze
                                       </label>
@@ -653,7 +654,7 @@ function Join_Waptab() {
                                         type="text"
                                         name="floating_first_name"
                                         id="floating_first_name"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
                                       />
@@ -669,7 +670,7 @@ function Join_Waptab() {
                                         type="email"
                                         name="floating_email"
                                         id="floating_email"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
                                       />
@@ -686,7 +687,7 @@ function Join_Waptab() {
                                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                         name="floating_phone"
                                         id="floating_phone"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
                                       />
@@ -702,7 +703,7 @@ function Join_Waptab() {
                                         type="text"
                                         name="floating_company"
                                         id="floating_company"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
                                       />
@@ -718,7 +719,7 @@ function Join_Waptab() {
                                         type="text"
                                         name="floating_password"
                                         id="floating_password"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
                                         disabled
@@ -726,7 +727,7 @@ function Join_Waptab() {
                                       <label
                                       
                                         for="floating_password"
-                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 font-bold duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
                                       >
                                         Silver
                                       </label>
@@ -1057,9 +1058,9 @@ function Join_Waptab() {
                     ~ Complimentary concession passes for expos/seminars/
                     training programs
                   </p>
-                  <p className="text-base text-body-color dark:text-dark-6">
+                  {/* <p className="text-base text-body-color dark:text-dark-6">
                     ~ Subscription to In-house e-magazine
-                  </p>
+                  </p> */}
                   <p className="text-base text-body-color dark:text-dark-6">
                     ~ Access to consultation and advice
                     (technical/commercial/tax) from expert panel
@@ -1139,7 +1140,7 @@ function Join_Waptab() {
                                         type="email"
                                         name="floating_email"
                                         id="floating_email"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
                                       />
@@ -1156,7 +1157,7 @@ function Join_Waptab() {
                                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                         name="floating_phone"
                                         id="floating_phone"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
                                       />
@@ -1172,7 +1173,7 @@ function Join_Waptab() {
                                         type="text"
                                         name="floating_company"
                                         id="floating_company"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
                                       />
@@ -1188,7 +1189,7 @@ function Join_Waptab() {
                                         type="text"
                                         name="floating_password"
                                         id="floating_password"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
                                         disabled
@@ -1196,7 +1197,7 @@ function Join_Waptab() {
                                       <label
                                       
                                         for="floating_password"
-                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 font-bold duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
                                       >
                                         Diamond
                                       </label>
