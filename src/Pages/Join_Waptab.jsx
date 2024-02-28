@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
 
 function Join_Waptab() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,11 +13,32 @@ function Join_Waptab() {
   };
 
 
+  const [isOpen_1, setIsOpen_1] = useState(false);
+
+  const openModal_1 = () => {
+    setIsOpen_1(true);
+  };
+
+  const closeModal_1 = () => {
+    setIsOpen_1(false);
+  };
+
+
+  const [isOpen_2, setIsOpen_2] = useState(false);
+
+  const openModal_2 = () => {
+    setIsOpen_2(true);
+  };
+
+  const closeModal_2 = () => {
+    setIsOpen_2(false);
+  };
+
   function Submit(e) {
     e.preventDefault();
     const formEle = document.querySelector("form");
     const formData = new FormData(formEle);
-    
+
     fetch(
       "https://script.google.com/macros/s/AKfycbyq0CC-2RM0wL---k7ImbsxHHgwEYapKQGqEfcXKDeRfDuM5SF5N0oFcqieNyuVR7bG/exec",
       {
@@ -94,15 +116,12 @@ function Join_Waptab() {
                 {isOpen && (
                   <div className="fixed inset-0 overflow-y-auto">
                     <div className="flex items-center justify-center min-h-screen text-center sm:block sm:p-0">
-                      {/* Background overlay */}
                       <div
                         className="fixed inset-0 transition-opacity"
                         aria-hidden="true"
                       >
                         <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
                       </div>
-
-                      {/* Actual modal content */}
                       <span
                         className="hidden sm:inline-block  sm:align-middle sm:h-screen"
                         aria-hidden="true"
@@ -113,38 +132,148 @@ function Join_Waptab() {
                         <div class="py-6 lg:px-6 md:px-0 px-2 sm:py-12">
                           <div class="relative py-3 lg:px-0 md:px-0 px-3 sm:max-w-xl sm:mx-auto">
                             <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
-                            <div class="relative px-4 py-1 rounded-lg bg-white shadow-lg sm:rounded-3xl sm:p-20">
-                              <div class="max-w-md mx-auto">
+                            <div class="relative px-4 py-1 rounded-lg bg-white shadow-lg sm:rounded-3xl">
+                            <div className="text-end">
+                            <button
+                            onClick={closeModal}
+                            type="button"
+                            className="p-1 pt-3"
+                          >
+                          <AiOutlineClose className="text-black" />
+                          </button>
+                          </div>
+                              <div class="max-w-md mx-auto ps-10 pe-10 pb-10">
                                 <div>
-                                  <h1 class="text-2xl font-semibold">
-                                    Login Form with Floating Labels
+                                  <h1 class="text-2xl pb-3 text-center font-semibold">
+                                    Join WAPTAB
                                   </h1>
                                 </div>
                                 <div class="divide-y divide-gray-200">
-                                <div className="App">
-        <h1>Contact Me form</h1>
-        <h2>
-          This demonstrates how to send data from a website form to Google sheet
-          in React or Vanilla jS
-        </h2>
-        <div>
-          <form className="form" onSubmit={(e) => Submit(e)}>
-            <input placeholder="Your Name" name="Name" type="text" />
-            <input placeholder="Your Email" name="Email" type="text" />
-            <input placeholder="Your Message" name="Message" type="text" />
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
-      </div>
-                                </div>
-                                <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                                  <button
-                                    onClick={closeModal}
-                                    type="button"
-                                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
-                                  >
-                                    Close
-                                  </button>
+                                  {/* <div className="App">
+                                    <h1>Contact Me form</h1>
+                                    <h2>
+                                      This demonstrates how to send data from a
+                                      website form to Google sheet in React or
+                                      Vanilla jS
+                                    </h2>
+                                    <div>
+                                      <form
+                                        className="form"
+                                        onSubmit={(e) => Submit(e)}
+                                      >
+                                        <input
+                                          placeholder="Your Name"
+                                          name="Name"
+                                          type="text"
+                                        />
+                                        <input
+                                          placeholder="Your Email"
+                                          name="Email"
+                                          type="text"
+                                        />
+                                        <input
+                                          placeholder="Your Message"
+                                          name="Message"
+                                          type="text"
+                                        />
+                                        <input type="submit" value="Submit" />
+                                      </form>
+                                    </div>
+                                  </div> */}
+
+                                  <form class="max-w-md mx-auto">
+                                    <div class="relative z-0 w-full mb-5 group">
+                                      <input
+                                        type="text"
+                                        name="floating_first_name"
+                                        id="floating_first_name"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        placeholder=" "
+                                        required
+                                      />
+                                      <label
+                                        for="floating_first_name"
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                      >
+                                        Full Name
+                                      </label>
+                                    </div>
+                                    <div class="relative z-0 w-full mb-5 group">
+                                      <input
+                                        type="email"
+                                        name="floating_email"
+                                        id="floating_email"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        placeholder=" "
+                                        required
+                                      />
+                                      <label
+                                        for="floating_email"
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                      >
+                                        Email address
+                                      </label>
+                                    </div>
+                                    <div class="relative z-0 w-full mb-5 group">
+                                      <input
+                                        type="tel"
+                                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                        name="floating_phone"
+                                        id="floating_phone"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        placeholder=" "
+                                        required
+                                      />
+                                      <label
+                                        for="floating_phone"
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                      >
+                                        Phone number (123-456-7890)
+                                      </label>
+                                    </div>
+                                    <div class="relative z-0 w-full mb-5 group">
+                                      <input
+                                        type="text"
+                                        name="floating_company"
+                                        id="floating_company"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        placeholder=" "
+                                        required
+                                      />
+                                      <label
+                                        for="floating_company"
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                      >
+                                        Company (Ex. Google)
+                                      </label>
+                                    </div>
+                                    <div class="relative z-0 w-full mb-5 group">
+                                      <input
+                                        type="text"
+                                        name="floating_password"
+                                        id="floating_password"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        placeholder=" "
+                                        required
+                                        disabled
+                                      />
+                                      <label
+                                      
+                                        for="floating_password"
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
+                                      >
+                                        Bronze
+                                      </label>
+                                    </div>
+                                    <div className="text-center">
+                                    <button
+                                      type="submit"
+                                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                    >
+                                      Submit
+                                    </button>
+                                    </div>
+                                  </form>
                                 </div>
                               </div>
                             </div>
@@ -154,17 +283,6 @@ function Join_Waptab() {
                     </div>
                   </div>
                 )}
-
-                {/* <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                          <button
-                            onClick={closeModal}
-                            type="button"
-                            className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
-                          >
-                            Close
-                          </button>
-                        </div> */}
-
                 <div>
                   <span className="absolute right-0 top-7 z-[-1]">
                     <svg
@@ -475,11 +593,184 @@ function Join_Waptab() {
                   </p>
                 </div>
                 <a
-                  href="javascript:void(0)"
+                onClick={openModal_1}
+                  // href="javascript:void(0)"
                   className="block w-full rounded-md border border-primary bg-primary p-3 text-center text-base font-medium bg-[rgb(3,74,102)] text-white transition hover:bg-[rgb(32,64,77)]"
                 >
                   Choose Silver
                 </a>
+
+                {isOpen_1 && (
+                  <div className="fixed inset-0 overflow-y-auto">
+                    <div className="flex items-center justify-center min-h-screen text-center sm:block sm:p-0">
+                      <div
+                        className="fixed inset-0 transition-opacity"
+                        aria-hidden="true"
+                      >
+                        <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+                      </div>
+                      <span
+                        className="hidden sm:inline-block  sm:align-middle sm:h-screen"
+                        aria-hidden="true"
+                      >
+                        &#8203;
+                      </span>
+                      <div className="inline-block align-bottom rounded-lg text-left overflow-hidden shadow-x transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                        <div class="py-6 lg:px-6 md:px-0 px-2 sm:py-12">
+                          <div class="relative py-3 lg:px-0 md:px-0 px-3 sm:max-w-xl sm:mx-auto">
+                            <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+                            <div class="relative px-4 py-1 rounded-lg bg-white shadow-lg sm:rounded-3xl">
+                            <div className="text-end">
+                            <button
+                            onClick={closeModal_1}
+                            type="button"
+                            className="p-1 pt-3"
+                          >
+                          <AiOutlineClose className="text-black" />
+                          </button>
+                          </div>
+                              <div class="max-w-md mx-auto ps-10 pe-10 pb-10">
+                                <div>
+                                  <h1 class="text-2xl pb-3 text-center font-semibold">
+                                    Join WAPTAB
+                                  </h1>
+                                </div>
+                                <div class="divide-y divide-gray-200">
+                                  {/* <div className="App">
+                                    <h1>Contact Me form</h1>
+                                    <h2>
+                                      This demonstrates how to send data from a
+                                      website form to Google sheet in React or
+                                      Vanilla jS
+                                    </h2>
+                                    <div>
+                                      <form
+                                        className="form"
+                                        onSubmit={(e) => Submit(e)}
+                                      >
+                                        <input
+                                          placeholder="Your Name"
+                                          name="Name"
+                                          type="text"
+                                        />
+                                        <input
+                                          placeholder="Your Email"
+                                          name="Email"
+                                          type="text"
+                                        />
+                                        <input
+                                          placeholder="Your Message"
+                                          name="Message"
+                                          type="text"
+                                        />
+                                        <input type="submit" value="Submit" />
+                                      </form>
+                                    </div>
+                                  </div> */}
+
+                                  <form class="max-w-md mx-auto">
+                                    <div class="relative z-0 w-full mb-5 group">
+                                      <input
+                                        type="text"
+                                        name="floating_first_name"
+                                        id="floating_first_name"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        placeholder=" "
+                                        required
+                                      />
+                                      <label
+                                        for="floating_first_name"
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                      >
+                                        Full Name
+                                      </label>
+                                    </div>
+                                    <div class="relative z-0 w-full mb-5 group">
+                                      <input
+                                        type="email"
+                                        name="floating_email"
+                                        id="floating_email"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        placeholder=" "
+                                        required
+                                      />
+                                      <label
+                                        for="floating_email"
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                      >
+                                        Email address
+                                      </label>
+                                    </div>
+                                    <div class="relative z-0 w-full mb-5 group">
+                                      <input
+                                        type="tel"
+                                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                        name="floating_phone"
+                                        id="floating_phone"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        placeholder=" "
+                                        required
+                                      />
+                                      <label
+                                        for="floating_phone"
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                      >
+                                        Phone number (123-456-7890)
+                                      </label>
+                                    </div>
+                                    <div class="relative z-0 w-full mb-5 group">
+                                      <input
+                                        type="text"
+                                        name="floating_company"
+                                        id="floating_company"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        placeholder=" "
+                                        required
+                                      />
+                                      <label
+                                        for="floating_company"
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                      >
+                                        Company (Ex. Google)
+                                      </label>
+                                    </div>
+                                    <div class="relative z-0 w-full mb-5 group">
+                                      <input
+                                        type="text"
+                                        name="floating_password"
+                                        id="floating_password"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        placeholder=" "
+                                        required
+                                        disabled
+                                      />
+                                      <label
+                                      
+                                        for="floating_password"
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
+                                      >
+                                        Silver
+                                      </label>
+                                    </div>
+                                    <div className="text-center">
+                                    <button
+                                      type="submit"
+                                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                    >
+                                      Submit
+                                    </button>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 <div>
                   <span className="absolute right-0 top-7 z-[-1]">
                     <svg
@@ -804,11 +1095,182 @@ function Join_Waptab() {
                   </p>
                 </div>
                 <a
+                onClick={openModal_2}
                   href="javascript:void(0)"
                   className="block w-full rounded-md border border-stroke dark:border-dark-3 bg-[rgb(3,74,102)] p-3 text-center text-base font-medium text-white transition hover:bg-[rgb(32,64,77)]"
                 >
                   Choose Diamond
                 </a>
+                {isOpen_2 && (
+                  <div className="fixed inset-0 overflow-y-auto">
+                    <div className="flex items-center justify-center min-h-screen text-center sm:block sm:p-0">
+                      <div
+                        className="fixed inset-0 transition-opacity"
+                        aria-hidden="true"
+                      >
+                        <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+                      </div>
+                      <span
+                        className="hidden sm:inline-block  sm:align-middle sm:h-screen"
+                        aria-hidden="true"
+                      >
+                        &#8203;
+                      </span>
+                      <div className="inline-block align-bottom rounded-lg text-left overflow-hidden shadow-x transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                        <div class="py-6 lg:px-6 md:px-0 px-2 sm:py-12">
+                          <div class="relative py-3 lg:px-0 md:px-0 px-3 sm:max-w-xl sm:mx-auto">
+                            <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+                            <div class="relative px-4 py-1 rounded-lg bg-white shadow-lg sm:rounded-3xl">
+                            <div className="text-end">
+                            <button
+                            onClick={closeModal_2}
+                            type="button"
+                            className="p-1 pt-3"
+                          >
+                          <AiOutlineClose className="text-black" />
+                          </button>
+                          </div>
+                              <div class="max-w-md mx-auto ps-10 pe-10 pb-10">
+                                <div>
+                                  <h1 class="text-2xl pb-3 text-center font-semibold">
+                                    Join WAPTAB
+                                  </h1>
+                                </div>
+                                <div class="divide-y divide-gray-200">
+                                  {/* <div className="App">
+                                    <h1>Contact Me form</h1>
+                                    <h2>
+                                      This demonstrates how to send data from a
+                                      website form to Google sheet in React or
+                                      Vanilla jS
+                                    </h2>
+                                    <div>
+                                      <form
+                                        className="form"
+                                        onSubmit={(e) => Submit(e)}
+                                      >
+                                        <input
+                                          placeholder="Your Name"
+                                          name="Name"
+                                          type="text"
+                                        />
+                                        <input
+                                          placeholder="Your Email"
+                                          name="Email"
+                                          type="text"
+                                        />
+                                        <input
+                                          placeholder="Your Message"
+                                          name="Message"
+                                          type="text"
+                                        />
+                                        <input type="submit" value="Submit" />
+                                      </form>
+                                    </div>
+                                  </div> */}
+
+                                  <form class="max-w-md mx-auto">
+                                    <div class="relative z-0 w-full mb-5 group">
+                                      <input
+                                        type="text"
+                                        name="floating_first_name"
+                                        id="floating_first_name"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        placeholder=" "
+                                        required
+                                      />
+                                      <label
+                                        for="floating_first_name"
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                      >
+                                        Full Name
+                                      </label>
+                                    </div>
+                                    <div class="relative z-0 w-full mb-5 group">
+                                      <input
+                                        type="email"
+                                        name="floating_email"
+                                        id="floating_email"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        placeholder=" "
+                                        required
+                                      />
+                                      <label
+                                        for="floating_email"
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                      >
+                                        Email address
+                                      </label>
+                                    </div>
+                                    <div class="relative z-0 w-full mb-5 group">
+                                      <input
+                                        type="tel"
+                                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                        name="floating_phone"
+                                        id="floating_phone"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        placeholder=" "
+                                        required
+                                      />
+                                      <label
+                                        for="floating_phone"
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                      >
+                                        Phone number (123-456-7890)
+                                      </label>
+                                    </div>
+                                    <div class="relative z-0 w-full mb-5 group">
+                                      <input
+                                        type="text"
+                                        name="floating_company"
+                                        id="floating_company"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        placeholder=" "
+                                        required
+                                      />
+                                      <label
+                                        for="floating_company"
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                                      >
+                                        Company (Ex. Google)
+                                      </label>
+                                    </div>
+                                    <div class="relative z-0 w-full mb-5 group">
+                                      <input
+                                        type="text"
+                                        name="floating_password"
+                                        id="floating_password"
+                                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                                        placeholder=" "
+                                        required
+                                        disabled
+                                      />
+                                      <label
+                                      
+                                        for="floating_password"
+                                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 "
+                                      >
+                                        Diamond
+                                      </label>
+                                    </div>
+                                    <div className="text-center">
+                                    <button
+                                      type="submit"
+                                      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                    >
+                                      Submit
+                                    </button>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
                 <div>
                   <span className="absolute right-0 top-7 z-[-1]">
                     <svg
@@ -1107,7 +1569,6 @@ function Join_Waptab() {
 }
 
 export default Join_Waptab;
-
 
 // Name
 // Email

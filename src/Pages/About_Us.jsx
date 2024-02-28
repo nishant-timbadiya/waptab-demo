@@ -51,13 +51,13 @@ const About_Us = () => {
                   </div>
               </div>
               <div className="ImgContent mx-auto">
-                <img src={Vision} className="rounded-md"  alt="..." />
+                <img src={Vision} className="rounded-md w-[670px]"  alt="..." />
               </div>
             </div>
 
             <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-flow-col-1 items-center lg:px-16 py-10 px-5">
               <div className="ImgContent order-2 lg:order-1 mx-auto">
-                <img src={Mission} className="rounded-md" alt="" />
+                <img src={Mission} className="rounded-md  w-[670px]" alt="" />
               </div>
               <div className="lg:pe-6 lg:ps-7 md:ps-16 md:pe-10 order-1  px-2 pb-3 lg:order-2">
                 <div>
@@ -89,13 +89,13 @@ const About_Us = () => {
                   </div>
               </div>
               <div className="ImgContent mx-auto">
-                <img src={Third} className="rounded-md w-screen"  alt="..." />
+                <img src={Third} className="rounded-md  w-[670px]"  alt="..." />
               </div>
             </div>
 
             <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-flow-col-1 items-center lg:px-16 lg:py-10 lg:pb-20 md:pb-16 px-5 pb-10">
               <div className="ImgContent order-2 lg:order-1 mx-auto">
-                <img src={Goal} className="rounded-md w-screen" alt="" />
+                <img src={Goal} className="rounded-md  w-[670px]" alt="" />
               </div>
               <div className="lg:pe-6 lg:ps-7 md:ps-16 md:pe-10 order-1 lg:order-2  px-2 pb-3">
                 <div>
