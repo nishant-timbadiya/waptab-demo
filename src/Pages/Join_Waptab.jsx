@@ -119,7 +119,7 @@ function Join_Waptab() {
                 <span className="mb-3 block text-lg font-semibold text-primary">
                   Bronze
                 </span>
-                <h2 className="mb-5 text-[42px] font-bold text-dark dark:text-white">
+                <h2 className="mb-5 text-[42px] font-bold text-black">
                   <span>1,500</span>
                   <span className="text-base font-medium text-body-color dark:text-dark-6">
                     INR / 3 Years
@@ -571,7 +571,7 @@ function Join_Waptab() {
                 <span className="mb-3 block text-lg font-semibold text-primary">
                   Silver
                 </span>
-                <h2 className="mb-5 text-[42px] font-bold text-dark dark:text-white">
+                <h2 className="mb-5 text-[42px] font-bold text-black">
                   <span>5,000</span>
                   <span className="text-base font-medium text-body-color dark:text-dark-6">
                     INR/ 3 Years
@@ -1027,7 +1027,7 @@ function Join_Waptab() {
                 <span className="mb-3 block text-lg font-semibold text-primary">
                   Diamond
                 </span>
-                <h2 className="mb-5 text-[42px] font-bold text-dark dark:text-white">
+                <h2 className="mb-5 text-[42px] font-bold text-black">
                   <span>1,00,000</span>
                   <span className="text-base font-medium text-body-color dark:text-dark-6">
                     INR/ 15 Years
