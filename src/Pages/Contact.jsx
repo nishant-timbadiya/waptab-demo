@@ -1,14 +1,14 @@
 import React, { useState, useRef } from "react";
 import "../Elements/Contact.css";
-import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
-
   const form = useRef();
 
-  const notify = () => toast("Submit Successfully");
+  const notifySuccess = () => toast.success("Submit Successfully");
+  const notifyError = () => toast.error("Failed to Submit");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -34,33 +34,33 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm('service_2t6swr6', 'template_9t6v5bo', form.current, {
-        publicKey: 'K7uMJi0Y5vlmwltXZ',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          setFormData({
-            name: "",
-            phone_number: "",
-            email: "",
-            company_name: "",
-          });
-          setErrors({
-            name: "",
-            phone_number: "",
-            email: "",
-            company_name: "",
-          });
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-
     if (validateForm()) {
-      console.log("Form is valid, submitting...");
+      emailjs
+        .sendForm("service_2t6swr6", "template_9t6v5bo", form.current, {
+          publicKey: "K7uMJi0Y5vlmwltXZ",
+        })
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            setFormData({
+              name: "",
+              phone_number: "",
+              email: "",
+              company_name: "",
+            });
+            setErrors({
+              name: "",
+              phone_number: "",
+              email: "",
+              company_name: "",
+            });
+            notifySuccess();
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+            notifyError();
+          }
+        );
     } else {
       console.log("Form contains errors, cannot submit.");
     }
@@ -108,7 +108,6 @@ const Contact = () => {
       <div className="center-title">
         <div className="get-in-touch font-[Montserrat]">Get In Touch</div>
         <div className="px-10 md:px-28 lg:px-64 pt-10 pb-5">
-          {/* Your content goes here */}
 
           <div className="grid lg:grid-cols-3 md:grid-cols-1 grid-cols-1 lg:gap-20 md:gap-12 gap-10 ">
             <div className="flex flex-col items-center justify-center rounded w-full h-44 p-4 text-center bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] hover:shadow-2xl hover:cursor-pointer">
@@ -186,7 +185,8 @@ const Contact = () => {
               Have a specific inquiry or looking to explore new opportunities?
               Our experienced team is ready to engage with you.
             </p>
-            <form ref={form}
+            <form
+              ref={form}
               onSubmit={handleSubmit}
               className="mx-auto mt-8 bg-white rounded-lg py-6 px-4 shadow-md"
             >
@@ -227,15 +227,14 @@ const Contact = () => {
               />
               {errors.company_name && <span>{errors.company_name}</span>}
               <div>
-              <button
-                className="text-white bg-[rgb(25,115,154)] hover:bg-[rgb(25,83,154)] font-semibold rounded-md text-sm px-6 py-3 mt-4 block w-full"
-                type="submit"
-                value="Send"
-                onClick={notify}
-              >
-                Submit
-              </button>
-              <ToastContainer />
+                <button
+                  className="text-white bg-[rgb(25,115,154)] hover:bg-[rgb(25,83,154)] font-semibold rounded-md text-sm px-6 py-3 mt-4 block w-full"
+                  type="submit"
+                  // value="Send"
+                  onClick={handleSubmit}
+                >
+                  Submit
+                </button>
               </div>
             </form>
           </div>
@@ -244,6 +243,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

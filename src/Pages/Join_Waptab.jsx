@@ -1525,8 +1525,3 @@ function Join_Waptab() {
 }
 
 export default Join_Waptab;
-
-// Name
-// Email
-// Number
-// designation
