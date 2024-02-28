@@ -3,8 +3,8 @@ import '../../Elements/About_home.css'
 import First from "../../images/about-1.jpg";
 import Second from "../../images/about-2.jpg";
 import { NavLink } from "react-router-dom";
-import Vision from "../../images/vision.jpg";
-import Mission from "../../images/mission.jpg";
+import Vision from "../../images/vision-1.jpg";
+import Mission from "../../images/mission-1.jpg";
 
 const About_home = () => {
   return (
@@ -38,7 +38,7 @@ const About_home = () => {
 
             <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-flow-col-1 items-center lg:px-16 py-10 text-gray-800">
               <div className="ImgContent order-2 lg:order-1 mx-auto">
-                <img src={Second} className="rounded-md" alt="" />
+                <img src={Mission} className="rounded-md" alt="" />
               </div>
               <div className="lg:pe-6 lg:ps-7 md:ps-16 md:pe-10 order-1 px-2 pb-3 lg:order-2">
                 <div>

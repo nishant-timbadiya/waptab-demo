@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../Elements/Header.css";
 // import { logo_img } from "../images/data";
-import logo from "../images/waptab-logo.jpg";
+import logo from "../images/waptab-logo-1.jpg";
 import { FaBars } from "react-icons/fa6";
 import { AiOutlineClose } from "react-icons/ai";
 

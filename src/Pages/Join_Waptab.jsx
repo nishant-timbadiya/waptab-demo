@@ -1,6 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Join_Waptab() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
+
+  function Submit(e) {
+    e.preventDefault();
+    const formEle = document.querySelector("form");
+    const formData = new FormData(formEle);
+    
+    fetch(
+      "https://script.google.com/macros/s/AKfycbyq0CC-2RM0wL---k7ImbsxHHgwEYapKQGqEfcXKDeRfDuM5SF5N0oFcqieNyuVR7bG/exec",
+      {
+        method: "POST",
+        body: formData,
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
   return (
     <div>
       <section className="relative overflow-hidden bg-slate-100 dark:bg-dark pt-20 pb-12">
@@ -19,7 +51,7 @@ function Join_Waptab() {
           </div>
           <div className="-mx-4 flex flex-wrap justify-center lg:px-24 md:px-6 px-5">
             <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-              <div className="relative z-10 mb-10  hover:shadow-2xl overflow-hidden rounded-[10px] border-2 border-stroke dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
+              <div className="mb-10  hover:shadow-2xl overflow-hidden rounded-[10px] border-2 border-stroke dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
                 <span className="mb-3 block text-lg font-semibold text-primary">
                   Bronze
                 </span>
@@ -52,11 +84,87 @@ function Join_Waptab() {
                   </p>
                 </div>
                 <a
-                  href="javascript:void(0)"
+                  onClick={openModal}
+                  // href="javascript:void(0)"
                   className="block w-full rounded-md border border-stroke dark:border-dark-3 bg-[rgb(3,74,102)] p-3 text-center text-base font-medium text-white transition hover:bg-[rgb(32,64,77)]"
                 >
                   Choose Bronze
                 </a>
+
+                {isOpen && (
+                  <div className="fixed inset-0 overflow-y-auto">
+                    <div className="flex items-center justify-center min-h-screen text-center sm:block sm:p-0">
+                      {/* Background overlay */}
+                      <div
+                        className="fixed inset-0 transition-opacity"
+                        aria-hidden="true"
+                      >
+                        <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+                      </div>
+
+                      {/* Actual modal content */}
+                      <span
+                        className="hidden sm:inline-block  sm:align-middle sm:h-screen"
+                        aria-hidden="true"
+                      >
+                        &#8203;
+                      </span>
+                      <div className="inline-block align-bottom rounded-lg text-left overflow-hidden shadow-x transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                        <div class="py-6 lg:px-6 md:px-0 px-2 sm:py-12">
+                          <div class="relative py-3 lg:px-0 md:px-0 px-3 sm:max-w-xl sm:mx-auto">
+                            <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+                            <div class="relative px-4 py-1 rounded-lg bg-white shadow-lg sm:rounded-3xl sm:p-20">
+                              <div class="max-w-md mx-auto">
+                                <div>
+                                  <h1 class="text-2xl font-semibold">
+                                    Login Form with Floating Labels
+                                  </h1>
+                                </div>
+                                <div class="divide-y divide-gray-200">
+                                <div className="App">
+        <h1>Contact Me form</h1>
+        <h2>
+          This demonstrates how to send data from a website form to Google sheet
+          in React or Vanilla jS
+        </h2>
+        <div>
+          <form className="form" onSubmit={(e) => Submit(e)}>
+            <input placeholder="Your Name" name="Name" type="text" />
+            <input placeholder="Your Email" name="Email" type="text" />
+            <input placeholder="Your Message" name="Message" type="text" />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+                                </div>
+                                <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                                  <button
+                                    onClick={closeModal}
+                                    type="button"
+                                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
+                                  >
+                                    Close
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                          <button
+                            onClick={closeModal}
+                            type="button"
+                            className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
+                          >
+                            Close
+                          </button>
+                        </div> */}
+
                 <div>
                   <span className="absolute right-0 top-7 z-[-1]">
                     <svg
@@ -328,8 +436,9 @@ function Join_Waptab() {
                 </div>
               </div>
             </div>
+
             <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-              <div className="relative z-10 mb-10  hover:shadow-2xl overflow-hidden rounded-[10px] border-2 border-stroke dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
+              <div className=" mb-10  hover:shadow-2xl overflow-hidden rounded-[10px] border-2 border-stroke dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
                 <span className="mb-3 block text-lg font-semibold text-primary">
                   Silver
                 </span>
@@ -643,7 +752,7 @@ function Join_Waptab() {
               </div>
             </div>
             <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-              <div className="relative z-10 mb-10  hover:shadow-2xl overflow-hidden rounded-[10px] border-2 border-stroke dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
+              <div className=" mb-10  hover:shadow-2xl overflow-hidden rounded-[10px] border-2 border-stroke dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
                 <span className="mb-3 block text-lg font-semibold text-primary">
                   Diamond
                 </span>
@@ -993,12 +1102,6 @@ function Join_Waptab() {
           </div>
         </div>
       </section>
-
-      
-
-
-
-
     </div>
   );
 }

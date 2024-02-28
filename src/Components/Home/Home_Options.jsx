@@ -3,7 +3,7 @@ import Option from "./Option";
 import "../../Elements/Carousel.css";
 import Expo from "../../images/expo.png";
 import IAPMO from "../../images/iapmo.png";
-import Facilites from "../../images/facilites.jpg";
+import Facilites from "../../images/facilites-1.jpg";
 import Activites from "../../images/activites.jpg";
 
 const Home_Options = () => {

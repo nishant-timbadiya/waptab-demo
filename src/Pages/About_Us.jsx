@@ -3,8 +3,8 @@ import "../Elements/About.css";
 // import First from "../images/about-1.jpg";
 import Second from "../images/about-2.jpg";
 import Third from "../images/about-3.jpg";
-import Vision from "../images/vision.jpg";
-import Mission from "../images/mission.jpg";
+import Vision from "../images/vision-1.jpg";
+import Mission from "../images/mission-1.jpg";
 import Goal from "../images/goal.jpg";
 
 const About_Us = () => {
@@ -12,17 +12,17 @@ const About_Us = () => {
     <>
       <section class="about text-slate-800 bg-white body-font">
         <div class=" mx-auto">
-          <div class="text-center px-5 py-16 mb-20 bg-slate-100">
+          <div class="text-center px-5 py-16 mb-20  font-[Montserrat] bg-slate-100">
             <h1 class="about-title sm:text-3xl text-2xl    mb-7">
               <span className="title-underline">About</span> Us
             </h1>
             <p class="text-base leading-relaxed  xl:w-3/4 lg:w-3/4  mx-auto text-gray-800 text-opacity-80">
-              <b>Welcome to WAPTAB</b> Your Trusted Hub for Water Purification and Treatment Solutions in India!
+              <b>WAPTAB</b> stands out as one of India's premier platforms in the water industry, engaging with latest technologies for water and wastewater management services.
             </p>
 
             <br />
             <p class="text-base leading-relaxed xl:w-3/4 lg:w-3/4 mx-auto text-gray-800 text-opacity-80">
-              <b>WAPTAB</b> stands as a cornerstone organization within the Water Purification and Treatment Industry across India. Operating nationally, we've cultivated a diverse community of members representing every corner of our vast country. This diversity enriches our collective knowledge and experience, making WAPTAB a vibrant platform for collaboration and advancement.
+              <b>WAPTAB</b> brings together professionals and experts from various sectors of the water industry, including manufacturers, traders, importers, and service providers. It focuses on activities such as water purification and treatment, residential, commercial, and industrial water filtration plants, wastewater treatment plants, domestic and industrial RO plants, and more. By uniting the entire industry, WAPTAB offers a special chance to share business opportunities, network, and discover innovative water solutions all in one place.
             </p>
 
             <p class="text-base leading-relaxed xl:w-3/4 lg:w-3/4 mx-auto text-gray-800 text-opacity-80 pt-3">
@@ -57,7 +57,7 @@ const About_Us = () => {
 
             <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-flow-col-1 items-center lg:px-16 py-10 px-5">
               <div className="ImgContent order-2 lg:order-1 mx-auto">
-                <img src={Second} className="rounded-md" alt="" />
+                <img src={Mission} className="rounded-md" alt="" />
               </div>
               <div className="lg:pe-6 lg:ps-7 md:ps-16 md:pe-10 order-1  px-2 pb-3 lg:order-2">
                 <div>
@@ -65,7 +65,7 @@ const About_Us = () => {
                 </div>
                 <div>
                 <ul>
-                  <li className=" font-[Montserrat]">&#9658; &nbsp;Our mission at WAPTAB is to nurture innovation and excellence in water purification and treatment practices. Whether you're a manufacturer, trader, importer, or service provider, WAPTAB offers you a unique forum to showcase your contributions, build valuable connections, and stay informed about the latest industry developments.</li>
+                  <li className=" font-[Montserrat]">&#9658; &nbsp;The mission of <b className="font-semibold">WAPTAB</b> is to bring together the dynamic water community from all across India. It strives to create a platform for the water industry to come together and collaborate in finding solutions to challenges within the water sector.</li>
                   {/* <li className="text-lg text-[rgb(3,74,102);] font-medium pt-3 underline underline-offset-4  font-[Montserrat]">A JOINT HAND VICTORY</li> */}
                   <li className="py-2  font-[Montserrat]">&#9658; &nbsp;WAPTAB is a joint effort of the business community from Bharat</li>
                   <li className=" font-[Montserrat]">&#9658; &nbsp;Manufacturers, traders, importers and service providers engaged in activity related to water purification domestic as well as industrial water filtration plants, wastewater treatment plants, domestic & industrial RO plants, water purification plants spares and chemicals all activities for safe and clean water useful to drink, farm and manufacturing process.</li>

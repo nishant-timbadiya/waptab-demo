@@ -11,7 +11,7 @@ const Footer = () => {
             <div class="lg:w-2/4 md:w-1/2 w-full px-4 pt-5">
               <h2 class="footer-about-title font-[Montserrat] tracking-widest  mb-3">About us</h2>
               <p className="footer-about-content">
-                WAPTAG, is a collective of water industry professionals and
+                WAPTAB, is a collective of water industry professionals and
                 experts, fostering collaboration and innovation in water
                 purification, treatment, filtration, and wastewater management.
               </p>
