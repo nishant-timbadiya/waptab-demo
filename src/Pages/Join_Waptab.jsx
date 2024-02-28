@@ -113,7 +113,7 @@ function Join_Waptab() {
           </div>
           <div className="-mx-4 flex flex-wrap justify-center lg:px-24 md:px-6 px-5">
             <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-              <div className="mb-10  hover:shadow-2xl overflow-hidden rounded-[10px] border-2 border-stroke dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
+              <div className="mb-10  hover:shadow-2xl overflow-hidden rounded-[10px] border-2 border-stroke  dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
                 <span className="mb-3 block text-lg font-semibold text-primary">
                   Bronze
                 </span>
@@ -228,7 +228,7 @@ function Join_Waptab() {
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="tel"
-                                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                        pattern="{0123456789}"
                                         name="PhoneNumber"
                                         id="floating_phone"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-non dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -687,7 +687,7 @@ function Join_Waptab() {
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="tel"
-                                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                        pattern="{0123456789}"
                                         name="PhoneNumber"
                                         id="floating_phone"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -1160,7 +1160,7 @@ function Join_Waptab() {
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="tel"
-                                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                        pattern="{0123456789}"
                                         name="PhoneNumber"
                                         id="floating_phone"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
