@@ -25,7 +25,7 @@ const Hero_Carousel = () => {
         pauseOnHover: false,
         type: "loop",
         autoplay: true, // Set autoplay to true
-        interval: 2500, // Optionally, set the interval between slides in milliseconds (default is 5000)
+        interval: 4000, // Optionally, set the interval between slides in milliseconds (default is 5000)
         pagination: false,
         arrows: false,
         speed: 1200,

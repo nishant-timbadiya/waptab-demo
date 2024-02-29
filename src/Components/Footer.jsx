@@ -48,14 +48,14 @@ const Footer = () => {
         <div class="bg-gray-800 bg-opacity-75">
           <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
             <p class="text-sm text-gray-400 sm:ml-6 sm:mt-0 mt-4">
-              © 2020 WAPTAI —
+              © 2024 WAPTAB -
               <a
                 href="https://twitter.com/knyttneve"
                 class="text-gray-500 ml-1"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @knyttneve
+                All Rights Reserved.
               </a>
             </p>
             <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">

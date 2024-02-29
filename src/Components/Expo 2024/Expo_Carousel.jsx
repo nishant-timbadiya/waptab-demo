@@ -29,7 +29,7 @@ const Expo_Carousel = () => {
           pauseOnHover: false,
           type: "loop",
           autoplay: true,
-          interval: 2500,
+          interval: 4000,
           pagination: false,
           arrows: false,
           speed: 1500,
