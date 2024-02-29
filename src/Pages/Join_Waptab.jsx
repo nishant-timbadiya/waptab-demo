@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Join_Waptab() {
   const [isOpen, setIsOpen] = useState(false);
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
+  const notifyError = () => toast.success("Submit Successfully");
+  const notifySuccess = () => toast.error("Failed to Submit");
 
   const openModal = () => {
     setIsOpen(true);
@@ -32,68 +38,171 @@ function Join_Waptab() {
     setIsOpen_2(false);
   };
 
+
+  const [formData, setFormData] = useState({
+    Name: "",
+    PhoneNumber: "",
+    Email: "",
+    CompanyName: "",
+  });
+
+  const [errors, setErrors] = useState({
+    Name: "",
+    PhoneNumber: "",
+    Email: "",
+    CompanyName: "",
+  });
+
+  function validateForm(formData) {
+    let valid = true;
+    let newErrors = {};
+
+    // Name validation
+    if (!formData.Name.trim()) {
+      newErrors.Name = "Name is required";
+      valid = false;
+    }
+
+    // Phone number validation
+    if (!formData.PhoneNumber.trim()) {
+      newErrors.PhoneNumber = "Phone number is required";
+      valid = false;
+    }
+
+    // Email validation
+    if (!formData.Email.trim()) {
+      newErrors.Email = "Email is required";
+      valid = false;
+    } else if (
+      !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(formData.Email)
+    ) {
+      newErrors.Email = "Invalid email address";
+      valid = false;
+    }
+
+    // Company name validation
+    if (!formData.CompanyName.trim()) {
+      newErrors.CompanyName = "Company name is required";
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  }
+
+  const handleChangeInput = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   function Submit(e) {
     e.preventDefault();
-    const formEle = document.querySelector("form");
-    const formData = new FormData(formEle);
 
-    fetch(
-      "https://script.google.com/macros/s/AKfycbz0nTtdDpHZWERAOJVXKL-iHLZmtzLSyVBeACPBeKLhTlvhmizYMT62Ewa-rZrAFcV8/exec",
-      {
-        method: "POST",
-        body: formData,
-      }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (validateForm(formData)) {
+      setLoading(true);
+
+      fetch(
+        "https://script.google.com/macros/s/AKfycbz0nTtdDpHZWERAOJVXKL-iHLZmtzLSyVBeACPBeKLhTlvhmizYMT62Ewa-rZrAFcV8/exec",
+        {
+          method: "POST",
+          body: new FormData(form.current),
+        }
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          notifySuccess();
+        })
+        .catch((error) => {
+          console.log(error);
+          notifyError();
+          setFormData({
+            Name: "",
+            PhoneNumber: "",
+            Email: "",
+            CompanyName: "",
+          });
+          closeModal();
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    }
   }
+
 
   function Submit_1(e) {
     e.preventDefault();
-    const formEle = document.querySelector("form");
-    const formData = new FormData(formEle);
 
-    fetch(
-      "https://script.google.com/macros/s/AKfycbz0nTtdDpHZWERAOJVXKL-iHLZmtzLSyVBeACPBeKLhTlvhmizYMT62Ewa-rZrAFcV8/exec",
-      {
-        method: "POST",
-        body: formData,
-      }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (validateForm(formData)) {
+      setLoading(true);
+
+      fetch(
+        "https://script.google.com/macros/s/AKfycbz0nTtdDpHZWERAOJVXKL-iHLZmtzLSyVBeACPBeKLhTlvhmizYMT62Ewa-rZrAFcV8/exec",
+        {
+          method: "POST",
+          body: new FormData(form.current),
+        }
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          notifySuccess();
+        })
+        .catch((error) => {
+          console.log(error);
+          notifyError();
+          setFormData({
+            Name: "",
+            PhoneNumber: "",
+            Email: "",
+            CompanyName: "",
+          });
+          closeModal_1();
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    }
   }
 
   function Submit_2(e) {
     e.preventDefault();
-    const formEle = document.querySelector("form");
-    const formData = new FormData(formEle);
 
-    fetch(
-      "https://script.google.com/macros/s/AKfycbz0nTtdDpHZWERAOJVXKL-iHLZmtzLSyVBeACPBeKLhTlvhmizYMT62Ewa-rZrAFcV8/exec",
-      {
-        method: "POST",
-        body: formData,
-      }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (validateForm(formData)) {
+      setLoading(true);
+
+      fetch(
+        "https://script.google.com/macros/s/AKfycbz0nTtdDpHZWERAOJVXKL-iHLZmtzLSyVBeACPBeKLhTlvhmizYMT62Ewa-rZrAFcV8/exec",
+        {
+          method: "POST",
+          body: new FormData(form.current),
+        }
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          notifySuccess();
+        })
+        .catch((error) => {
+          console.log(error);
+          notifyError();
+          setFormData({
+            Name: "",
+            PhoneNumber: "",
+            Email: "",
+            CompanyName: "",
+          });
+          closeModal_2();
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    }
   }
+
 
   return (
     <div>
@@ -190,18 +299,24 @@ function Join_Waptab() {
                                 </div>
                                 <div class="divide-y divide-gray-200">
                                   <form
-                                    onSubmit={(e) => Submit(e)}
+                                    ref={form}
+                                    onSubmit={Submit}
                                     class="max-w-md mx-auto form"
                                   >
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="text"
                                         name="Name"
+                                        value={formData.Name}
+                                        onChange={handleChangeInput}
                                         id="floating_first_name"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
                                       />
+                                      {errors.Name && (
+                                        <span>{errors.Name}</span>
+                                      )}
                                       <label
                                         for="floating_first_name"
                                         class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
@@ -213,11 +328,16 @@ function Join_Waptab() {
                                       <input
                                         type="email"
                                         name="Email"
+                                        value={formData.Email}
+                                        onChange={handleChangeInput}
                                         id="floating_email"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
                                       />
+                                      {errors.Email && (
+                                        <span>{errors.Email}</span>
+                                      )}
                                       <label
                                         for="floating_email"
                                         class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
@@ -230,11 +350,16 @@ function Join_Waptab() {
                                         type="tel"
                                         pattern="{0123456789}"
                                         name="PhoneNumber"
+                                        value={formData.PhoneNumber}
+                                        onChange={handleChangeInput}
                                         id="floating_phone"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-non dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
                                       />
+                                      {errors.PhoneNumber && (
+                                        <span>{errors.PhoneNumber}</span>
+                                      )}
                                       <label
                                         for="floating_phone"
                                         class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
@@ -246,11 +371,16 @@ function Join_Waptab() {
                                       <input
                                         type="text"
                                         name="CompanyName"
+                                        value={formData.CompanyName}
+                                        onChange={handleChangeInput}
                                         id="floating_company"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
                                         required
                                       />
+                                      {errors.CompanyName && (
+                                        <span>{errors.CompanyName}</span>
+                                      )}
                                       <label
                                         for="floating_company"
                                         class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
@@ -278,11 +408,12 @@ function Join_Waptab() {
                                     </div>
                                     <div className="text-center">
                                       <button
+                                        disabled={loading}
                                         type="submit"
                                         value="Submit"
                                         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                       >
-                                        Submit
+                                        {loading ? 'Submitting...' : 'Submit'}
                                       </button>
                                     </div>
                                   </form>
@@ -649,13 +780,16 @@ function Join_Waptab() {
                                 </div>
                                 <div class="divide-y divide-gray-200">
                                   <form
-                                    onSubmit={(e) => Submit_1(e)}
+                                    ref={form}
+                                    onSubmit={Submit_1}
                                     class="max-w-md mx-auto form"
                                   >
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="text"
                                         name="Name"
+                                        value={formData.Name}
+                                        onChange={handleChangeInput}
                                         id="floating_first_name"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -672,6 +806,8 @@ function Join_Waptab() {
                                       <input
                                         type="email"
                                         name="Email"
+                                        value={formData.Email}
+                                        onChange={handleChangeInput}
                                         id="floating_email"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -689,6 +825,8 @@ function Join_Waptab() {
                                         type="tel"
                                         pattern="{0123456789}"
                                         name="PhoneNumber"
+                                        value={formData.PhoneNumber}
+                                        onChange={handleChangeInput}
                                         id="floating_phone"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -705,6 +843,8 @@ function Join_Waptab() {
                                       <input
                                         type="text"
                                         name="CompanyName"
+                                        value={formData.CompanyName}
+                                        onChange={handleChangeInput}
                                         id="floating_company"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -737,11 +877,12 @@ function Join_Waptab() {
                                     </div>
                                     <div className="text-center">
                                       <button
+                                        disabled={loading}
                                         value="Submit"
                                         type="submit"
                                         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                       >
-                                        Submit
+                                       {loading ? 'Submitting...' : 'Submit'}
                                       </button>
                                     </div>
                                   </form>
@@ -1122,13 +1263,16 @@ function Join_Waptab() {
                                 </div>
                                 <div class="divide-y divide-gray-200">
                                   <form
-                                    onSubmit={(e) => Submit_2(e)}
+                                    ref={form}
+                                    onSubmit={Submit_2}
                                     class="max-w-md mx-auto form"
                                   >
                                     <div class="relative z-0 w-full mb-5 group">
                                       <input
                                         type="text"
                                         name="Name"
+                                        value={formData.Name}
+                                        onChange={handleChangeInput}
                                         id="floating_first_name"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -1145,6 +1289,8 @@ function Join_Waptab() {
                                       <input
                                         type="email"
                                         name="Email"
+                                        value={formData.Email}
+                                        onChange={handleChangeInput}
                                         id="floating_email"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -1162,6 +1308,8 @@ function Join_Waptab() {
                                         type="tel"
                                         pattern="{0123456789}"
                                         name="PhoneNumber"
+                                        value={formData.PhoneNumber}
+                                        onChange={handleChangeInput}
                                         id="floating_phone"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -1178,6 +1326,8 @@ function Join_Waptab() {
                                       <input
                                         type="text"
                                         name="CompanyName"
+                                        value={formData.CompanyName}
+                                        onChange={handleChangeInput}
                                         id="floating_company"
                                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                                         placeholder=" "
@@ -1210,11 +1360,12 @@ function Join_Waptab() {
                                     </div>
                                     <div className="text-center">
                                       <button
+                                        disabled={loading}
                                         value="Submit"
                                         type="submit"
                                         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                       >
-                                        Submit
+                                        {loading ? 'Submitting...' : 'Submit'}
                                       </button>
                                     </div>
                                   </form>
@@ -1520,6 +1671,7 @@ function Join_Waptab() {
           </div>
         </div>
       </section>
+      <ToastContainer />
     </div>
   );
 }
