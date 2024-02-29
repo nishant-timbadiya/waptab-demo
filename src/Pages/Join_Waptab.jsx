@@ -223,7 +223,7 @@ function Join_Waptab() {
           </div>
           <div className="">
           <div className="-mx-4 flex flex-wrap justify-center lg:px-24 md:px-6 px-5">
-            <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div className="w-full px-4 md:w-1/1 lg:w-1/3">
               <div className="mb-10  hover:shadow-2xl bronze overflow-hidden rounded-[10px] border-2 border-stroke  dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
                 <span className="mb-3 block text-lg font-semibold font-[Montserrat] text-primary">
                   Bronze
@@ -237,15 +237,18 @@ function Join_Waptab() {
                 <p className="mb-8 border-b font-[Montserrat] border-stroke dark:border-dark-3 pb-8 text-base text-body-color dark:text-dark-6">
                   Bronze Membership for Technicians and Service Engineers
                 </p>
-                <div className="mb-9 flex flex-col font-[Montserrat] gap-[14px]">
+                <div className="mb-9 flex flex-col font-[Montserrat] gap-[20px]">
                   <p className="text-base text-body-color dark:text-dark-6">
-                    ~ Express entry in any WAPTAB Expo
+                    ~ Express entry in every prestigious WAPTAB Expo"
                   </p>
                   <p className="text-base text-body-color dark:text-dark-6">
-                    ~ Concession benefits/advantages for training programs
+                    ~ Concession benefits for training programs
                   </p>
                   <p className="text-base text-body-color dark:text-dark-6">
-                    ~ Subscription to In-House E-Magazine
+                    ~ Exclusive Subscription to In-House E-Magazine
+                  </p>
+                  <p className="text-base text-body-color dark:text-dark-6">
+                    ~ Concession advantages for training programs
                   </p>
                   <p className="text-base text-body-color dark:text-dark-6">
                     ~ Access to consultation and advice
@@ -259,7 +262,7 @@ function Join_Waptab() {
                 <a
                   onClick={openModal}
                   // href="javascript:void(0)"
-                  className="block w-full rounded-md border font-[Montserrat] cursor-pointer border-stroke dark:border-dark-3 bg-[rgb(3,74,102)] p-3 text-center text-base font-medium text-white transition hover:bg-[rgb(32,64,77)]"
+                  className="block w-full rounded-md border font-[Montserrat] cursor-pointer border-stroke dark:border-dark-3 bg-[#ce994f] p-3 text-center uppercase text-base font-semibold text-white transition hover:bg-[#c38b3e]"
                 >
                   Choose Bronze
                 </a>
@@ -700,7 +703,7 @@ function Join_Waptab() {
               </div>
             </div>
 
-            <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div className="w-full px-4 md:w-1/1 lg:w-1/3">
               <div className=" mb-10  hover:shadow-2xl silver overflow-hidden rounded-[10px] border-2 border-stroke dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
                 <span className="mb-3 block text-lg font-[Montserrat] font-semibold text-primary">
                   Silver
@@ -714,9 +717,9 @@ function Join_Waptab() {
                 <p className="mb-8 border-b border-stroke dark:border-dark-3 pb-8 text-base text-body-color dark:text-dark-6 font-[Montserrat]">
                   Silver Membership for Companies Registered under GST
                 </p>
-                <div className="mb-9 flex flex-col font-[Montserrat] gap-[14px]">
+                <div className="mb-9 flex flex-col font-[Montserrat] gap-[20px]">
                   <p className="text-base text-body-color dark:text-dark-6">
-                    ~ Participation in General Meetings
+                    ~ Participation in all the General Meetings
                   </p>
                   <p className="text-base text-body-color dark:text-dark-6">
                     ~ Committee involvement by invitation only
@@ -740,7 +743,7 @@ function Join_Waptab() {
                 <a
                   onClick={openModal_1}
                   // href="javascript:void(0)"
-                  className="block w-full rounded-md border border-primary font-[Montserrat] cursor-pointer bg-primary p-3 text-center text-base font-medium bg-[rgb(3,74,102)] text-white transition hover:bg-[rgb(32,64,77)]"
+                  className="block w-full rounded-md border border-primary font-[Montserrat] cursor-pointer bg-primary p-3 text-center text-base font-semibold uppercase bg-[#9a9a9a] text-white transition hover:bg-[#8c8c8c]"
                 >
                   Choose Silver
                 </a>
@@ -900,7 +903,7 @@ function Join_Waptab() {
 
               </div>
             </div>
-            <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+            <div className="w-full px-4 md:w-1/1 lg:w-1/3">
               <div className=" mb-10  hover:shadow-2xl diamond overflow-hidden rounded-[10px] border-2 border-stroke dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
                 <span className="mb-3 block text-lg font-semibold font-[Montserrat] text-primary">
                   Diamond
@@ -914,7 +917,7 @@ function Join_Waptab() {
                 <p className="mb-8 border-b border-stroke font-[Montserrat] dark:border-dark-3 pb-8 text-base text-body-color dark:text-dark-6">
                   Limited to 200 Members on a First-Come, First-Served Basis
                 </p>
-                <div className="mb-9 flex flex-col font-[Montserrat] gap-[14px]">
+                <div className="mb-9 flex flex-col font-[Montserrat] gap-[10px]">
                   <p className="text-base text-body-color dark:text-dark-6">
                     ~ All Common Membership benefits included, plus
                   </p>
@@ -922,9 +925,9 @@ function Join_Waptab() {
                     ~ 5% discount or Rs 20,000 discount (whichever is lower on
                     WAPTAB Expo participation
                   </p>
-                  <p className="text-base text-body-color dark:text-dark-6">
+                  {/* <p className="text-base text-body-color dark:text-dark-6">
                     ~ Commercial activity discount
-                  </p>
+                  </p> */}
                   <p className="text-base text-body-color dark:text-dark-6">
                     ~ Opportunity to participate in committees & VIP entry and seating
                   </p>
@@ -955,7 +958,7 @@ function Join_Waptab() {
                 <a
                   onClick={openModal_2}
                   href="javascript:void(0)"
-                  className="block w-full font-[Montserrat] cursor-pointer rounded-md border border-stroke dark:border-dark-3 bg-[rgb(3,74,102)] p-3 text-center text-base font-medium text-white transition hover:bg-[rgb(32,64,77)]"
+                  className="block w-full font-[Montserrat] cursor-pointer rounded-md border border-stroke dark:border-dark-3 bg-[#508cd0] p-3 text-center text-base font-semibold text-white uppercase transition hover:bg-[#467bb9]"
                 >
                   Choose Diamond
                 </a>
