@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "../Elements/Join_Waptab.css"
 
 function Join_Waptab() {
   const [isOpen, setIsOpen] = useState(false);
@@ -223,7 +224,7 @@ function Join_Waptab() {
           <div className="">
           <div className="-mx-4 flex flex-wrap justify-center lg:px-24 md:px-6 px-5">
             <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-              <div className="mb-10  hover:shadow-2xl overflow-hidden rounded-[10px] border-2 border-stroke  dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
+              <div className="mb-10  hover:shadow-2xl bronze overflow-hidden rounded-[10px] border-2 border-stroke  dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
                 <span className="mb-3 block text-lg font-semibold font-[Montserrat] text-primary">
                   Bronze
                 </span>
@@ -700,7 +701,7 @@ function Join_Waptab() {
             </div>
 
             <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-              <div className=" mb-10  hover:shadow-2xl overflow-hidden rounded-[10px] border-2 border-stroke dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
+              <div className=" mb-10  hover:shadow-2xl silver overflow-hidden rounded-[10px] border-2 border-stroke dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
                 <span className="mb-3 block text-lg font-[Montserrat] font-semibold text-primary">
                   Silver
                 </span>
@@ -900,7 +901,7 @@ function Join_Waptab() {
               </div>
             </div>
             <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-              <div className=" mb-10  hover:shadow-2xl overflow-hidden rounded-[10px] border-2 border-stroke dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
+              <div className=" mb-10  hover:shadow-2xl diamond overflow-hidden rounded-[10px] border-2 border-stroke dark:border-dark-3 bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 xl:p-[50px]">
                 <span className="mb-3 block text-lg font-semibold font-[Montserrat] text-primary">
                   Diamond
                 </span>

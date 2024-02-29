@@ -214,3 +214,13 @@
     gap: 10px;
   }
    */
+
+  .bronze{
+    background-image: linear-gradient(to right bottom, #f0d7b3 0%, #ffffff 25%) !important;
+  }
+  .silver{
+    background-image: linear-gradient(to right bottom, rgb(220, 217, 217) 0%, #ffffff 25%) !important;
+  }
+  .diamond{
+    background-image: linear-gradient(to right bottom, #b9d0eb 0%, #ffffff 22%) !important;
+  }
