@@ -21,7 +21,7 @@ const Expo_Carousel = () => {
           8<sup>TH</sup> EDITION OF WAPTAG WATER EXPO 2024
         </div>
       </div>
-      <Splide
+      <Splide className="lg:py-12 lg:px-72 md:py-16 md:px-24 py-14 px-3"
         options={{
           rewind: true,
           width: "100%",
@@ -37,7 +37,7 @@ const Expo_Carousel = () => {
         aria-label=""
       >
         <SplideSlide>
-          <div className="" style={{ width: "900px", margin: "0 auto" }}>
+          <div className="" style={{ margin: "0 auto" }}>
             <img
               className=""
               src={Expo_1}
@@ -47,7 +47,7 @@ const Expo_Carousel = () => {
           </div>
         </SplideSlide>
         <SplideSlide>
-          <div className="" style={{ width: "900px", margin: "0 auto" }}>
+          <div className="" style={{ margin: "0 auto" }}>
             <img
               className=""
               src={Expo_2}
