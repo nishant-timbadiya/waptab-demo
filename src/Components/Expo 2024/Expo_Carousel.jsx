@@ -22,7 +22,7 @@ const Expo_Carousel = () => {
         </div>
       </div>
       <div className="py-12 px-3 lg:px-64 lg:py-12 md:px-24 md:py-20">
-      <Splide className="p-0"
+      <Splide
         options={{
           rewind: true,
           width: "100%",
