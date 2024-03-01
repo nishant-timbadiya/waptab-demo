@@ -23,6 +23,7 @@ const Past_Exhibitors = () => {
       <div className="exhibitors-title  text-center mt-10 ">
         <span className="title-underline-5">Our Past</span> Events
       </div>
+      <div className="lg:px-28 lg:py-12 md:px-16 md:py-12 px-7 py-10">
       <Splide
         options={{
     rewind: true,
@@ -86,6 +87,7 @@ const Past_Exhibitors = () => {
           <img src={carousel_img1} alt="Image 3" />
         </SplideSlide> */}
       </Splide>
+      </div>
     </>
   );
 };
