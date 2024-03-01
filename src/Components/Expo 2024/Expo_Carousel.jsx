@@ -21,7 +21,8 @@ const Expo_Carousel = () => {
           8<sup>TH</sup> EDITION OF WAPTAG WATER EXPO 2024
         </div>
       </div>
-      <Splide
+      <div className="py-12 px-3 lg:px-72 lg:py-16 md:px-24 md:py-20">
+      <Splide className="p-0"
         options={{
           rewind: true,
           width: "100%",
@@ -57,7 +58,7 @@ const Expo_Carousel = () => {
           </div>
         </SplideSlide>
       </Splide>
-
+        </div>
       <section className="expo-content-wrapper lg:px-40 md:px-16 bg-[#f2f2f2] py-20 px-6 lg:mt-10">
         <div className="mx-auto text-3xl font-bold underline underline-offset-8 text-[rgb(3,74,102)] font-[Montserrat] pb-2">EXPO 2024</div>
         <div className="expo-content text-center text-l">
