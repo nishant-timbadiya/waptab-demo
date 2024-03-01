@@ -21,7 +21,7 @@ const Expo_Carousel = () => {
           8<sup>TH</sup> EDITION OF WAPTAG WATER EXPO 2024
         </div>
       </div>
-      <div className="py-12 px-3 lg:px-72 lg:py-16 md:px-24 md:py-20">
+      <div className="py-12 px-3 lg:px-64 lg:py-12 md:px-24 md:py-20">
       <Splide className="p-0"
         options={{
           rewind: true,
