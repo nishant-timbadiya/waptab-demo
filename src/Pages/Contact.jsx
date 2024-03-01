@@ -198,7 +198,7 @@ const Contact = () => {
                 placeholder="Name"
                 className="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm outline-none"
               />
-              {errors.name && <span>{errors.name}</span>}
+              {errors.name && <span className="text-red-500 text-xs">{errors.name}</span>}
               <input
                 onChange={handleChangeInput}
                 value={formData.phone_number}
@@ -207,7 +207,7 @@ const Contact = () => {
                 placeholder="Phone number"
                 className="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm mt-4 outline-none"
               />
-              {errors.phone_number && <span>{errors.phone_number}</span>}
+              {errors.phone_number && <span className="text-red-500 text-xs">{errors.phone_number}</span>}
               <input
                 onChange={handleChangeInput}
                 value={formData.email}
@@ -216,7 +216,7 @@ const Contact = () => {
                 placeholder="Email"
                 className="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm mt-4 outline-none"
               />
-              {errors.email && <span>{errors.email}</span>}
+              {errors.email && <span className="text-red-500 text-xs">{errors.email}</span>}
               <input
                 onChange={handleChangeInput}
                 value={formData.company_name}
@@ -225,7 +225,7 @@ const Contact = () => {
                 placeholder="Company Name"
                 className="w-full rounded-md h-12 px-6 bg-[#f0f1f2] text-sm mt-4 outline-none"
               />
-              {errors.company_name && <span>{errors.company_name}</span>}
+              {errors.company_name && <span className="text-red-500 text-xs">{errors.company_name}</span>}
               <div>
                 <button
                   className="text-white bg-[rgb(25,115,154)] hover:bg-[rgb(25,83,154)] font-semibold rounded-md text-sm px-6 py-3 mt-4 block w-full"
