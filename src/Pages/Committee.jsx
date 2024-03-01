@@ -30,7 +30,7 @@ const Committee = () => {
   return (
     <>
 
-      <div>
+      <div className="bg-[rgb(241,245,249)]">
         <div className="text-center pt-5">
           <div className="text-4xl uppercase title-underline-2 font-bold text-[rgb(3,74,102)]">Committee</div>
         </div>
